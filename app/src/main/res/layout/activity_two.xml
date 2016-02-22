@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="{relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:background="#faeed4"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/top"
+        android:onClick="twoClick"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#a2c66e"
+            android:layout_weight="0.05">
+
+            <com.example.landon.physics.FontOverride
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movement with Constant Acceleration"
+                android:textSize="18dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
