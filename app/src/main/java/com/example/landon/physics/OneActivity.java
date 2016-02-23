@@ -14,6 +14,6 @@ public class OneActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.intro_animation, R.anim.outro_animation);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 }

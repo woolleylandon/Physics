@@ -15,16 +15,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void oneClick(View v) {
         startActivity(new Intent(MainActivity.this, OneActivity.class));
-        overridePendingTransition(R.anim.intro_animation, R.anim.outro_animation);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
     public void twoClick(View v) {
         startActivity(new Intent(MainActivity.this, TwoActivity.class));
-        overridePendingTransition(R.anim.intro_animation, R.anim.outro_animation);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
     public void threeClick(View v) {
         startActivity(new Intent(MainActivity.this, ThreeActivity.class));
-        overridePendingTransition(R.anim.intro_animation, R.anim.outro_animation);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 }
