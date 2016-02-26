@@ -29,7 +29,7 @@
                 <com.example.landon.physics.FontOverride
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Movement with Constant Velocity"
+                    android:text="@string/title_activity_one"
                     android:textSize="19dp"
                     android:textColor="#ffffff"
                     android:layout_gravity="center" />
@@ -63,7 +63,7 @@
                 <com.example.landon.physics.FontOverride
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Movement with Constant Acceleration"
+                    android:text="@string/title_activity_two"
                     android:textSize="18dp"
                     android:textColor="#ffffff"
                     android:layout_gravity="center"/>
@@ -96,7 +96,7 @@
                 <com.example.landon.physics.FontOverride
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Collisions"
+                    android:text="@string/title_activity_three"
                     android:textSize="20dp"
                     android:textColor="#ffffff"
                     android:layout_gravity="center"/>

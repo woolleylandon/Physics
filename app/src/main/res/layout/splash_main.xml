@@ -14,7 +14,7 @@
     <com.example.landon.physics.FontOverride
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Solve Physics"
+        android:text="@string/app_name"
         android:textSize="30dp"
         android:textColor="#efac57"
         android:layout_gravity="center"
