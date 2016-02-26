@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Solve Physics</string>
-    <string name="title_activity_one">你好</string>
-    <string name="title_activity_three">你好</string>
-    <string name="title_activity_two">你好</string>
-    <string name="action_settings">你好</string>
+    <string name="activity_one_name">你好</string>
+    <string name="activity_two_name">你好</string>
+    <string name="activity_three_name">你好</string>
+    <string name="settings">你好</string>
 </resources>

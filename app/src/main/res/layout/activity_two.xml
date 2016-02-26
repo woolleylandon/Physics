@@ -9,7 +9,6 @@
     <LinearLayout
         android:background="#faeed4"
         android:orientation="vertical"
-        android:layout_weight="1"
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
         android:id="@+id/top"
@@ -18,15 +17,14 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#a2c66e"
-            android:layout_weight="0.05">
+            android:layout_height="48dp"
+            android:background="#a2c66e">
 
             <com.example.landon.physics.FontOverride
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Movement with Constant Acceleration"
-                android:textSize="18dp"
+                android:text="@string/activity_two_name"
+                android:textSize="18sp"
                 android:textColor="#ffffff"
                 android:layout_gravity="center" />
 
