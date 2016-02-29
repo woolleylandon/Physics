@@ -44,6 +44,21 @@
             android:label="@string/activity_three_name"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity
+            android:name=".PopVelocity"
+            android:label="@string/pop_velocity_name"
+            android:theme="@style/AppTheme.PopUpTheme"/>
+
+        <activity
+            android:name=".PopAcceleration"
+            android:label="@string/pop_acceleration_name"
+            android:theme="@style/AppTheme.PopUpTheme"/>
+
+        <activity
+            android:name=".PopCollisions"
+            android:label="@string/pop_collisions_name"
+            android:theme="@style/AppTheme.PopUpTheme"/>
+
     </application>
 
 </manifest>

@@ -1,7 +1,9 @@
 package com.example.landon.physics;
 
-import android.view.View;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
 public class OneActivity extends AppCompatActivity {
@@ -10,6 +12,13 @@ public class OneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(OneActivity.this, PopVelocity.class));
+            }
+        });
     }
 
     @Override
@@ -18,5 +27,6 @@ public class OneActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
-    public void oneClick(View v) {}
+    public void oneClick(View v) {
+    }
 }
