@@ -38,8 +38,10 @@
     </string>
 
     <string name="acceleration_equation">
-        <html>s = s<sub><small>0</small></sub> + v
-            <sub><small>0</small></sub>t + ½</html>
+        <html>s = s<sub><small>0</small></sub> + v<sub><small>0</small></sub>t + ½at²\n\n</html>
+        <html>v = v<sub><small>0</small></sub> + at\n\n</html>
+        <html>v² = v<sub><small>0</small></sub>² + 2a(s - s<sub><small>0</small></sub>)\n\n</html>
+        <html>s = s<sub><small>0</small></sub> + ½(v + v<sub><small>0</small></sub>)t</html>
     </string>
 
     <string name="collisions_equation">

@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="13" >
+        android:weightSum="17" >
 
         <LinearLayout
             android:orientation="horizontal"
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:weightSum="5" >
+            android:weightSum="5">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -74,7 +74,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="x0"
+                    android:text="s0"
                     android:textSize="20sp"
                     android:textColor="#be4012"
                     android:id="@+id/textView4" />
@@ -136,7 +136,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="xf"
+                    android:text="sf"
                     android:textSize="20sp"
                     android:textColor="#be4012"
                     android:id="@+id/textView2" />
@@ -200,7 +200,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="v"
+                    android:text="v0"
                     android:textSize="20sp"
                     android:textColor="#be4012"
                     android:id="@+id/textView6" />
@@ -219,7 +219,7 @@
                     android:id="@+id/editText3"
                     android:inputType="number"
                     android:textSize="20sp"
-                    android:hint="@string/velocity"
+                    android:hint="@string/initial_velocity"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
@@ -261,7 +261,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="t"
+                    android:text="vf"
                     android:textSize="20sp"
                     android:textColor="#be4012"
                     android:id="@+id/textView8" />
@@ -280,7 +280,129 @@
                     android:id="@+id/editText4"
                     android:inputType="number"
                     android:textSize="20sp"
-                    android:hint="@string/initial_position"
+                    android:hint="@string/final_velocity"
+                    android:textColorHint="#d4d4d4"
+                    android:background="@drawable/text_backround"
+                    android:ems="10"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m/s"
+                    android:textSize="20sp"
+                    android:textColor="#efac57"
+                    android:id="@+id/textView9" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:weightSum="5" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a"
+                    android:textSize="20sp"
+                    android:textColor="#be4012"
+                    android:id="@+id/textView15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText6"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:hint="@string/acceleration"
+                    android:textColorHint="#d4d4d4"
+                    android:background="@drawable/text_backround"
+                    android:ems="10"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m/s²"
+                    android:textSize="20sp"
+                    android:textColor="#efac57"
+                    android:id="@+id/textView16" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:weightSum="5" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="t"
+                    android:textSize="20sp"
+                    android:textColor="#be4012"
+                    android:id="@+id/textView13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText5"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:hint="@string/time"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
@@ -300,7 +422,7 @@
                     android:text="s"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView9" />
+                    android:id="@+id/textView14" />
             </LinearLayout>
         </LinearLayout>
 

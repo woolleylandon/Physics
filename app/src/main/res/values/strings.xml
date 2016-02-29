@@ -16,4 +16,7 @@
     <string name="pop_velocity_name">Pop Velocity Name</string>
     <string name="pop_acceleration_name">Pop Acceleration Name</string>
     <string name="pop_collisions_name">Pop Collisions Name</string>
+    <string name="acceleration">Acceleration</string>
+    <string name="final_velocity">Final Velocity</string>
+    <string name="initial_velocity">Initial Velocity</string>
 </resources>
