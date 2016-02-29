@@ -1,5 +1,6 @@
 package com.example.landon.physics;
 
+import android.view.View;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -16,4 +17,6 @@ public class OneActivity extends AppCompatActivity {
         super.onBackPressed();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
+
+    public void oneClick(View v) {}
 }

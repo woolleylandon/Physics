@@ -49,8 +49,10 @@
                     android:textSize="20sp"
                     android:text="@string/formulas"
                     android:textColor="#efac57"
-                    android:id="@+id/textView"
-                    android:layout_gravity="center" />
+                    android:id="@+id/form"
+                    android:layout_gravity="center"
+                    android:onClick="oneClick" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -90,8 +92,8 @@
                         android:id="@+id/editText2"
                         android:inputType="number"
                         android:textSize="20sp"
-                        android:text="@string/initial_position"
-                        android:textColor="#d4d4d4"
+                        android:hint="@string/initial_position"
+                        android:textColorHint="#d4d4d4"
                         android:background="@drawable/text_backround"
                         android:ems="10"
                         android:gravity="center" />
@@ -153,8 +155,8 @@
                         android:id="@+id/editText"
                         android:inputType="number"
                         android:textSize="20sp"
-                        android:text="@string/final_position"
-                        android:textColor="#d4d4d4"
+                        android:hint="@string/final_position"
+                        android:textColorHint="#d4d4d4"
                         android:background="@drawable/text_backround"
                         android:ems="10"
                         android:gravity="center"/>
@@ -216,8 +218,8 @@
                         android:id="@+id/editText3"
                         android:inputType="number"
                         android:textSize="20sp"
-                        android:text="@string/velocity"
-                        android:textColor="#d4d4d4"
+                        android:hint="@string/velocity"
+                        android:textColorHint="#d4d4d4"
                         android:background="@drawable/text_backround"
                         android:ems="10"
                         android:gravity="center" />
@@ -277,8 +279,8 @@
                         android:id="@+id/editText4"
                         android:inputType="number"
                         android:textSize="20sp"
-                        android:text="@string/initial_position"
-                        android:textColor="#d4d4d4"
+                        android:hint="@string/initial_position"
+                        android:textColorHint="#d4d4d4"
                         android:background="@drawable/text_backround"
                         android:ems="10"
                         android:gravity="center" />
