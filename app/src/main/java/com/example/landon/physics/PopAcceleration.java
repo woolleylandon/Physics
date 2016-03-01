@@ -10,6 +10,7 @@ public class PopAcceleration extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pop_acceleration);
+        FontHelper.applyFont(this, findViewById(R.id.pop_acceleration), "fonts/avenir.ttf");
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int x = dm.widthPixels;
