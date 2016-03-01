@@ -19,4 +19,8 @@
     <string name="acceleration">Acceleration</string>
     <string name="final_velocity">Final Velocity</string>
     <string name="initial_velocity">Initial Velocity</string>
+    <string name="mass_a">Mass A</string>
+    <string name="mass_b">Mass B</string>
+    <string name="initial_velocity_a">Initial Velocity A</string>
+    <string name="initial_velocity_b">Initial Velocity B</string>
 </resources>

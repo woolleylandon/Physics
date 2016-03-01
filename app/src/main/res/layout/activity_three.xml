@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="13" >
+        android:weightSum="15" >
 
         <LinearLayout
             android:orientation="horizontal"
@@ -74,7 +74,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="x0"
+                    android:text="mA"
                     android:textSize="20sp"
                     android:textColor="#be4012"
                     android:id="@+id/textView4" />
@@ -93,7 +93,7 @@
                     android:id="@+id/editText2"
                     android:inputType="number"
                     android:textSize="20sp"
-                    android:hint="@string/initial_position"
+                    android:hint="@string/mass_a"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
@@ -110,7 +110,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m"
+                    android:text="kg"
                     android:textSize="20sp"
                     android:textColor="#efac57"
                     android:id="@+id/textView5" />
@@ -136,7 +136,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="xf"
+                    android:text="mB"
                     android:textSize="20sp"
                     android:textColor="#be4012"
                     android:id="@+id/textView2" />
@@ -156,7 +156,7 @@
                     android:id="@+id/editText"
                     android:inputType="number"
                     android:textSize="20sp"
-                    android:hint="@string/final_position"
+                    android:hint="@string/mass_b"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
@@ -174,7 +174,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m"
+                    android:text="kg"
                     android:textSize="20sp"
                     android:textColor="#efac57"
                     android:id="@+id/textView3" />
@@ -200,7 +200,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="v"
+                    android:text="@string/va1"
                     android:textSize="20sp"
                     android:textColor="#be4012"
                     android:id="@+id/textView6" />
@@ -219,7 +219,7 @@
                     android:id="@+id/editText3"
                     android:inputType="number"
                     android:textSize="20sp"
-                    android:hint="@string/velocity"
+                    android:hint="@string/initial_velocity_a"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
@@ -261,7 +261,68 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="t"
+                    android:text="@string/vb1"
+                    android:textSize="20sp"
+                    android:textColor="#be4012"
+                    android:id="@+id/textView17" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText7"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:hint="@string/initial_velocity_b"
+                    android:textColorHint="#d4d4d4"
+                    android:background="@drawable/text_backround"
+                    android:ems="10"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m/s"
+                    android:textSize="20sp"
+                    android:textColor="#efac57"
+                    android:id="@+id/textView18" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:weightSum="5" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/v2"
                     android:textSize="20sp"
                     android:textColor="#be4012"
                     android:id="@+id/textView8" />
@@ -280,7 +341,7 @@
                     android:id="@+id/editText4"
                     android:inputType="number"
                     android:textSize="20sp"
-                    android:hint="@string/initial_position"
+                    android:hint="@string/final_velocity"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
@@ -297,7 +358,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="s"
+                    android:text="m/s"
                     android:textSize="20sp"
                     android:textColor="#efac57"
                     android:id="@+id/textView9" />

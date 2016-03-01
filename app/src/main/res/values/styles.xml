@@ -33,6 +33,18 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
+    <string name="va1">
+        <html>vA<sup><small>1</small></sup></html>
+    </string>
+
+    <string name="vb1">
+        <html>vB<sup><small>1</small></sup></html>
+    </string>
+
+    <string name="v2">
+        <html>v<sup><small>2</small></sup></html>
+    </string>
+
     <string name="velocity_equation">
         <html>xf = x<sub><small>0</small></sub> + v(t)</html>
     </string>
@@ -45,7 +57,11 @@
     </string>
 
     <string name="collisions_equation">
-        <html>collisions formula</html>
+        <html>Conversion of momentum:\n\n</html>
+        <html>mAvA<sub><small>1</small></sub> + mBvB<sub><small>1</small></sub> = (mA + mB)v<sub><snall>2</snall></sub>\n\n</html>
+        <html>Kinetic energy:\n\n</html>
+        <html>k<sub><small>1</small></sub> = ½mAvA²\n\n</html>
+        <html>k² = ½(mA + mB)v<sub><small>2</small></sub>²</html>
     </string>
 
 </resources>
