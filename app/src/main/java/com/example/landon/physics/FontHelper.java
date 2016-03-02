@@ -1,14 +1,15 @@
 package com.example.landon.physics;
 
-import android.content.Context;
-import android.graphics.Typeface;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.content.Context;
+import android.graphics.Typeface;
 
 public class FontHelper {
     private static final String TAG = FontHelper.class.getSimpleName();
+
     public static void applyFont(final Context context, final View root, final String fontPath) {
         try {
             if (root instanceof ViewGroup) {

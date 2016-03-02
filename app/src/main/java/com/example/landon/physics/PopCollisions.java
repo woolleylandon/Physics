@@ -1,7 +1,7 @@
 package com.example.landon.physics;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.app.Activity;
 import android.util.DisplayMetrics;
 
 public class PopCollisions extends Activity {

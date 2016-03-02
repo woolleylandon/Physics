@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_two"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="{relativePackage}.${activityClass}" >
+    tools:context="{relativePackage}.${activityClass}">
 
     <LinearLayout
         android:background="#faeed4"
@@ -13,7 +14,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="17" >
+        android:weightSum="17">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -31,9 +32,10 @@
                     android:text="@string/activity_two_name"
                     android:textSize="19sp"
                     android:textColor="#ffffff"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"/>
 
             </FrameLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -42,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:weightSum="5"
-            android:gravity="center" >
+            android:gravity="center">
 
             <Button
                 android:layout_width="wrap_content"
@@ -53,7 +55,7 @@
                 android:id="@+id/button"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                style="?android:attr/borderlessButtonStyle" />
+                style="?android:attr/borderlessButtonStyle"/>
 
         </LinearLayout>
 
@@ -70,7 +72,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,7 +80,7 @@
                     android:text="s0"
                     android:textSize="20sp"
                     android:textColor="#be4012"
-                    android:id="@+id/textView4" />
+                    android:id="@+id/textView4"/>
             </LinearLayout>
 
             <LinearLayout
@@ -86,7 +88,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <EditText
                     android:textCursorDrawable="@drawable/cursor_color"
@@ -99,7 +101,8 @@
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center" />
+                    android:gravity="center"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -107,7 +110,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -115,7 +118,8 @@
                     android:text="m"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView5" />
+                    android:id="@+id/textView5"/>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -141,7 +145,7 @@
                     android:text="sf"
                     android:textSize="20sp"
                     android:textColor="#be4012"
-                    android:id="@+id/textView2" />
+                    android:id="@+id/textView2"/>
 
             </LinearLayout>
 
@@ -180,7 +184,8 @@
                     android:text="m"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView3" />
+                    android:id="@+id/textView3"/>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -191,14 +196,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:weightSum="5" >
+            android:weightSum="5">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -206,7 +211,8 @@
                     android:text="v0"
                     android:textSize="20sp"
                     android:textColor="#be4012"
-                    android:id="@+id/textView6" />
+                    android:id="@+id/textView6"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -214,7 +220,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <EditText
                     android:textCursorDrawable="@drawable/cursor_color"
@@ -227,7 +233,8 @@
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center" />
+                    android:gravity="center"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -235,7 +242,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -243,8 +250,10 @@
                     android:text="m/s"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView7" />
+                    android:id="@+id/textView7"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -253,14 +262,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:weightSum="5" >
+            android:weightSum="5">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -268,7 +277,8 @@
                     android:text="vf"
                     android:textSize="20sp"
                     android:textColor="#be4012"
-                    android:id="@+id/textView8" />
+                    android:id="@+id/textView8"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -276,7 +286,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <EditText
                     android:textCursorDrawable="@drawable/cursor_color"
@@ -289,7 +299,8 @@
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center" />
+                    android:gravity="center"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -297,7 +308,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -305,8 +316,10 @@
                     android:text="m/s"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView9" />
+                    android:id="@+id/textView9"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -315,14 +328,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:weightSum="5" >
+            android:weightSum="5">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -330,7 +343,8 @@
                     android:text="a"
                     android:textSize="20sp"
                     android:textColor="#be4012"
-                    android:id="@+id/textView15" />
+                    android:id="@+id/textView15"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -338,7 +352,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <EditText
                     android:textCursorDrawable="@drawable/cursor_color"
@@ -351,7 +365,8 @@
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center" />
+                    android:gravity="center"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -359,7 +374,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -367,8 +382,10 @@
                     android:text="m/s²"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView16" />
+                    android:id="@+id/textView16"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -377,14 +394,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:weightSum="5" >
+            android:weightSum="5">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -392,7 +409,8 @@
                     android:text="t"
                     android:textSize="20sp"
                     android:textColor="#be4012"
-                    android:id="@+id/textView13" />
+                    android:id="@+id/textView13"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -400,7 +418,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <EditText
                     android:textCursorDrawable="@drawable/cursor_color"
@@ -413,7 +431,8 @@
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center" />
+                    android:gravity="center"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -421,7 +440,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -429,7 +448,7 @@
                     android:text="s"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView14" />
+                    android:id="@+id/textView14"/>
 
             </LinearLayout>
 
@@ -442,7 +461,7 @@
             android:layout_weight="2"
             android:weightSum="2"
             android:baselineAligned="false"
-            android:gravity="center" >
+            android:gravity="center">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -457,7 +476,8 @@
                     android:textSize="20sp"
                     android:text="@string/clear"
                     android:textColor="#efac57"
-                    android:id="@+id/textView10" />
+                    android:id="@+id/textView10"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -473,7 +493,7 @@
                     android:text="@string/solve"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView12" />
+                    android:id="@+id/textView12"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -484,7 +504,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:weightSum="5"
-            android:gravity="center" >
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -493,7 +513,7 @@
                 android:text="@string/solution"
                 android:textColor="#efac57"
                 android:id="@+id/textView11"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
