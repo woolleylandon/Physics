@@ -1,116 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="{relativePackage}.${activityClass}">
+    tools:context="{relativePackage}.${activityClass}"
+    android:orientation="vertical">
 
     <LinearLayout
+        android:background="#279bc0"
+        android:orientation="vertical"
+        android:layout_weight="1"
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
-        android:orientation="vertical">
+        android:id="@+id/top"
+        android:onClick="oneClick"
+        android:weightSum="1">
 
-        <LinearLayout
-            android:background="#279bc0"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:layout_width="fill_parent"
-            android:id="@+id/top"
-            android:onClick="oneClick"
-            android:weightSum="1">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
 
-            <FrameLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3">
+                android:text="@string/activity_one_name"
+                android:textSize="19sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"/>
 
-                <com.example.landon.physics.FontOverride
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_activity_one"
-                    android:textSize="19dp"
-                    android:textColor="#ffffff"
-                    android:layout_gravity="center" />
-
-            </FrameLayout>
+        </FrameLayout>
 
             <ImageView
+                android:contentDescription="@string/activity_one_name"
                 android:layout_width="234dp"
                 android:layout_height="104dp"
                 android:src="@drawable/constant_velocity"
-                android:layout_gravity="center_horizontal|bottom" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:background="#a2c66e"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:layout_width="fill_parent"
-            android:id="@+id/middle"
-            android:onClick="twoClick"
-            android:focusable="false"
-            android:weightSum="1">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3">
-
-                <com.example.landon.physics.FontOverride
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_activity_two"
-                    android:textSize="18dp"
-                    android:textColor="#ffffff"
-                    android:layout_gravity="center"/>
-
-            </FrameLayout>
-
-            <ImageView
-                android:layout_width="234dp"
-                android:layout_height="104dp"
-                android:src="@drawable/constant_acceleration"
-                android:layout_gravity="center_horizontal|bottom" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:background="#ffb300"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:layout_width="fill_parent"
-            android:id="@+id/bottom"
-            android:onClick="threeClick"
-            android:weightSum="1">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3">
-
-                <com.example.landon.physics.FontOverride
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_activity_three"
-                    android:textSize="20dp"
-                    android:textColor="#ffffff"
-                    android:layout_gravity="center"/>
-
-            </FrameLayout>
-
-            <ImageView
-                android:layout_width="234dp"
-                android:layout_height="104dp"
-                android:src="@drawable/collisions"
-                android:layout_gravity="center_horizontal|bottom" />
-
-        </LinearLayout>
+                android:layout_gravity="center_horizontal|bottom"/>
 
     </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:background="#a2c66e"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/middle"
+        android:onClick="twoClick"
+        android:focusable="false"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_two_name"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:contentDescription="@string/activity_two_name"
+            android:layout_width="234dp"
+            android:layout_height="104dp"
+            android:src="@drawable/constant_acceleration"
+            android:layout_gravity="center_horizontal|bottom"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#ffb300"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/bottom"
+        android:onClick="threeClick"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_three_name"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:contentDescription="@string/activity_three_name"
+            android:layout_width="234dp"
+            android:layout_height="104dp"
+            android:src="@drawable/collisions"
+            android:layout_gravity="center_horizontal|bottom"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
     <string name="app_name">Solve Physics</string>
-    <string name="title_activity_one">Movimiento con Velocidad Constante</string>
-    <string name="title_activity_two">Movimiento con Acceleración Constante</string>
-    <string name="title_activity_three">Colisiones</string>
-    <string name="action_settings">Configuración</string>
+    <string name="activity_one_name">Movimiento con Velocidad Constante</string>
+    <string name="activity_two_name">Movimiento con Acceleración Constante</string>
+    <string name="activity_three_name">Colisiones</string>
+    <string name="settings">Configuración</string>
 </resources>
