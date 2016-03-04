@@ -97,6 +97,31 @@ public class MCV extends PhysicsSystem implements Solvable {
   }
 
   public boolean solveSystem() {
-    return false;
+	  if(countUnknowns() == 1){
+		  if (x0 == null){
+			  double finalX0 = xf.getMagnitude() - v.getMagnitude() * t.getMagnitude();
+			  x0 = new Measure(finalX0, "m");
+			  return true;
+		  }
+		  if (xf == null) {
+			  double finalXf = x0.getMagnitude() + v.getMagnitude() * t.getMagnitude();
+			  xf = new Measure(finalXf, "m");
+			  return true;
+		  }
+		  if (v == null) {
+			  double finalV = (xf.getMagnitude() - x0.getMagnitude()) / t.getMagnitude();
+			  v = new Measure(finalV, "m/s");
+			  return true;
+		  }
+		  if (t == null) {
+			  double finalT = (xf.getMagnitude() - x0.getMagnitude()) / v.getMagnitude();
+			  t = new Measure(finalT, "s");
+			  return true;
+		  }
+		  else
+			  return false;
+	  }
+	  return false;
   }
+
 }

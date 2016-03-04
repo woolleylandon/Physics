@@ -17,7 +17,8 @@ public class MCVTest {
     MCV system;
     @Before
     public void setUp() throws Exception {
-        system = new MCV(new Measure(2, "m"), null, null, null);
+        //system = new MCV(new Measure(2, "m"), null, null, null);
+         system = new MCV(null,new Measure(4, "m"), new Measure(2, "m/s"), new Measure(2, "s"));
     }
 
     @After
@@ -27,11 +28,14 @@ public class MCVTest {
 
     @Test
     public void testCountUnknowns() throws Exception {
-        assertTrue(system.countUnknowns() == 3);
+        assertTrue(system.countUnknowns() == 1);
     }
 
     @Test
     public void testSolveSystem() throws Exception {
-        assertFalse(system.solveSystem());
+        //assertFalse(system.solveSystem());
+        assertTrue(system.solveSystem());
+
+
     }
 }
