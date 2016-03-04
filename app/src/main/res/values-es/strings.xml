@@ -6,4 +6,19 @@
     <string name="activity_two_name">Movimiento con Acceleración Constante</string>
     <string name="activity_three_name">Colisiones</string>
     <string name="settings">Configuración</string>
+    <string name="acceleration">Aceleración</string>
+    <string name="clear">Borrar</string>
+    <string name="velocity">Velocidad</string>
+    <string name="solve">Resolver</string>
+    <string name="time">Tiempo</string>
+    <string name="solution">Solución paso a paso</string>
+    <string name="mass_b">Masa B</string>
+    <string name="mass_a">Masa A</string>
+    <string name="initial_velocity_b">Velocidad inicial B</string>
+    <string name="initial_velocity_a">Velocidad inicial A</string>
+    <string name="initial_velocity">Velocidad inicial</string>
+    <string name="formulas">Fórmulas</string>
+    <string name="initial_position">Posición inicial</string>
+    <string name="final_velocity">Velocidad final</string>
+    <string name="final_position">Posición final</string>
 </resources>
