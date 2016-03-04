@@ -14,8 +14,9 @@ public class SplashScreen extends Activity {
         int splashInterval = 1000;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_main);
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.screen);
-        AlphaAnimation animation = new AlphaAnimation(0.0f , 1.0f ) ;
+        FontHelper.applyFont(this, findViewById(R.id.splash_screen), "fonts/avenir.ttf");
+        RelativeLayout layout = (RelativeLayout) findViewById(R.id.splash_screen);
+        AlphaAnimation animation = new AlphaAnimation(0.0f, 1.0f);
         animation.setFillAfter(true);
         animation.setDuration(1000);
         layout.startAnimation(animation);
