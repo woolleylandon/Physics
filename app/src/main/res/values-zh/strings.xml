@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="app_name">Solve Physics</string>
-    <string name="activity_one_name">你好</string>
-    <string name="activity_two_name">你好</string>
-    <string name="activity_three_name">你好</string>
-    <string name="settings">你好</string>
+    <string name="app_name">解物理</string>
+    <string name="activity_two_name">恒加速的運動</string>
+    <string name="activity_three_name">完全非彈性碰撞</string>
+    <string name="settings">設定</string>
+    <string name="acceleration_equation"></string>
+    <string name="acceleration">加速度</string>
+    <string name="activity_one_name">恒速度的運動</string>
+    <string name="clear">清除</string>
+    <string name="final_position">末位置</string>
+    <string name="final_velocity">末速度</string>
+    <string name="formulas">方程式</string>
+    <string name="initial_position">初位置</string>
+    <string name="initial_velocity">初速度</string>
+    <string name="initial_velocity_a">初速度A</string>
+    <string name="initial_velocity_b">初速度B</string>
+    <string name="mass_a">質量A</string>
+    <string name="mass_b">質量B</string>
+    <string name="pop_acceleration_name"></string>
+    <string name="solution">題解</string>
+    <string name="solve"></string>
 </resources>
