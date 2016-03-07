@@ -94,14 +94,15 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText2"
+                    android:id="@+id/mca_s0_txt"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/initial_position"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:numeric="signed|decimal" />
 
             </LinearLayout>
 
@@ -160,7 +161,7 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText"
+                    android:id="@+id/mca_sf_txt"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/final_position"
@@ -226,7 +227,7 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText3"
+                    android:id="@+id/mca_v0_txt"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/initial_velocity"
@@ -292,7 +293,7 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText4"
+                    android:id="@+id/mca_vf_txt"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/final_velocity"
@@ -358,14 +359,15 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText6"
+                    android:id="@+id/mca_a_txt"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/acceleration"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:numeric="signed|decimal" />
 
             </LinearLayout>
 
@@ -424,7 +426,7 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText5"
+                    android:id="@+id/mca_t_txt"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/time"
@@ -493,7 +495,8 @@
                     android:text="@string/solve"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView12"/>
+                    android:id="@+id/textView12"
+                    android:onClick="twoClick" />
             </LinearLayout>
 
         </LinearLayout>
