@@ -36,10 +36,10 @@ public class TwoActivity extends AppCompatActivity {
     public void twoClick(View v) {
         EditText s0Text = (EditText) findViewById(R.id.mca_s0_txt);
         EditText sfText = (EditText) findViewById(R.id.mca_sf_txt);
-        EditText v0Text  = (EditText) findViewById(R.id.mca_v0_txt);
-        EditText vfText  = (EditText) findViewById(R.id.mca_vf_txt);
-        EditText aText  = (EditText) findViewById(R.id.mca_a_txt);
-        EditText tText  = (EditText) findViewById(R.id.mca_t_txt);
+        EditText v0Text = (EditText) findViewById(R.id.mca_v0_txt);
+        EditText vfText = (EditText) findViewById(R.id.mca_vf_txt);
+        EditText aText = (EditText) findViewById(R.id.mca_a_txt);
+        EditText tText = (EditText) findViewById(R.id.mca_t_txt);
 
 
         Measure s0 = null;
