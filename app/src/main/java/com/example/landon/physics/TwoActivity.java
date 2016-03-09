@@ -1,6 +1,7 @@
 package com.example.landon.physics;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
@@ -48,16 +49,16 @@ public class TwoActivity extends AppCompatActivity {
 
         if (!s0Text.getText().toString().equals("")) {
             s0 = new Measure(Double.parseDouble(s0Text.getText().toString()), "m");
-            System.out.println("S0 is NOT empty: " + s0Text.getText().toString());
+            Log.i("INFO", "S0 is NOT empty: " + s0Text.getText().toString());
         } else {
-            System.out.println("S0 IS empty: " + s0Text.getText().toString());
+            Log.i("INFO", "S0 IS empty: " + s0Text.getText().toString());
         }
 
         if (!sfText.getText().toString().equals("")) {
             sf = new Measure(Double.parseDouble(sfText.getText().toString()), "m");
-            System.out.println("Sf is NOT empty: " + sfText.getText().toString());
+            Log.i("INFO", "Sf is NOT empty: " + sfText.getText().toString());
         } else {
-            System.out.println("Sf IS empty: " + sfText.getText().toString());
+            Log.i("INFO", "Sf IS empty: " + sfText.getText().toString());
         }
 
         if (!v0Text.getText().toString().equals("")) {
@@ -78,15 +79,19 @@ public class TwoActivity extends AppCompatActivity {
 
         MCA system = new MCA(s0, sf, v0, vf, a, t);
 
-        if (system.solveSystem()) {
-            s0Text.setText(system.getS0().getMagnitude() + "");
-            sfText.setText(system.getSf().getMagnitude() + "");
-            v0Text.setText(system.getV0().getMagnitude() + "");
-            vfText.setText(system.getVf().getMagnitude() + "");
-            aText.setText(system.getA().getMagnitude() + "");
-            tText.setText(system.getT().getMagnitude() + "");
-        } else {
-            // say in step by step that system cannot be solved
+        try {
+            if (system.solveSystem()) {
+                s0Text.setText(system.getS0().getMagnitude() + "");
+                sfText.setText(system.getSf().getMagnitude() + "");
+                v0Text.setText(system.getV0().getMagnitude() + "");
+                vfText.setText(system.getVf().getMagnitude() + "");
+                aText.setText(system.getA().getMagnitude() + "");
+                tText.setText(system.getT().getMagnitude() + "");
+            } else {
+                Log.i("INFO", "Unsolvable problem");
+            }
+        } catch (Exception error) {
+            Log.e("ERROR", "Crashed due to unsolvable problem.");
         }
     }
 }
