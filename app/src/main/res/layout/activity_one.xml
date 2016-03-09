@@ -362,7 +362,8 @@
                         android:text="@string/solve"
                         android:textSize="20sp"
                         android:textColor="#efac57"
-                        android:id="@+id/textView12"/>
+                        android:id="@+id/textView12"
+                        android:onClick="oneClick" />
 
                 </LinearLayout>
 
