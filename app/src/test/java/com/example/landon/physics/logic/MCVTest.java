@@ -18,7 +18,7 @@ public class MCVTest {
     @Before
     public void setUp() throws Exception {
         //system = new MCV(new Measure(2, "m"), null, null, null);
-         system = new MCV(null,new Measure(4, "m"), new Measure(2, "m/s"), new Measure(2, "s"));
+         system = new MCV(null,new Measure(4, "m"), new Measure(2, "m/s"), new Measure(1, "s"));
     }
 
     @After
