@@ -96,11 +96,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/x0Text"
-                        android:inputType="number"
                         android:textSize="20sp"
                         android:hint="@string/initial_position"
                         android:textColorHint="#d4d4d4"
                         android:background="@drawable/text_backround"
+                        android:inputType="numberDecimal|numberSigned"
                         android:ems="10"
                         android:gravity="center"/>
 
@@ -162,9 +162,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/xfText"
-                        android:inputType="number"
                         android:textSize="20sp"
                         android:hint="@string/final_position"
+                        android:inputType="numberDecimal|numberSigned"
                         android:textColorHint="#d4d4d4"
                         android:background="@drawable/text_backround"
                         android:ems="10"
@@ -228,13 +228,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/vText"
-                        android:inputType="number"
                         android:textSize="20sp"
                         android:hint="@string/velocity"
                         android:textColorHint="#d4d4d4"
                         android:background="@drawable/text_backround"
                         android:ems="10"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:inputType="numberSigned|numberDecimal" />
 
                 </LinearLayout>
 
@@ -294,13 +294,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tText"
-                        android:inputType="number"
                         android:textSize="20sp"
                         android:hint="@string/initial_position"
                         android:textColorHint="#d4d4d4"
                         android:background="@drawable/text_backround"
                         android:ems="10"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:inputType="numberSigned|numberDecimal" />
 
                 </LinearLayout>
 

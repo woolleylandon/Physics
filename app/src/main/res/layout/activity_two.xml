@@ -95,14 +95,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/mca_s0_txt"
-                    android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/initial_position"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
                     android:gravity="center"
-                    android:numeric="signed|decimal" />
+                    android:numeric="signed|decimal"
+                    android:inputType="numberSigned|numberDecimal" />
 
             </LinearLayout>
 
@@ -162,13 +162,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/mca_sf_txt"
-                    android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/final_position"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal" />
 
             </LinearLayout>
 
@@ -228,13 +228,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/mca_v0_txt"
-                    android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/initial_velocity"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal" />
 
             </LinearLayout>
 
@@ -294,13 +294,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/mca_vf_txt"
-                    android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/final_velocity"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal" />
 
             </LinearLayout>
 
@@ -360,14 +360,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/mca_a_txt"
-                    android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/acceleration"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
                     android:gravity="center"
-                    android:numeric="signed|decimal" />
+                    android:numeric="signed|decimal"
+                    android:inputType="numberSigned|numberDecimal" />
 
             </LinearLayout>
 
@@ -427,13 +427,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/mca_t_txt"
-                    android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/time"
                     android:textColorHint="#d4d4d4"
                     android:background="@drawable/text_backround"
                     android:ems="10"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal" />
 
             </LinearLayout>
 
