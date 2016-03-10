@@ -19,8 +19,15 @@ public class ThreeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three);
         FontHelper.applyFont(this, findViewById(R.id.activity_three), "fonts/avenir.ttf");
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button popButton = (Button) findViewById(R.id.button);
+        Button stepButton = (Button) findViewById(R.id.step);
+        stepButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ThreeActivity.this, StepCollision.class));
+            }
+        });
+        popButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ThreeActivity.this, PopCollisions.class));
@@ -90,7 +97,7 @@ public class ThreeActivity extends AppCompatActivity {
             System.out.println("vf IS empty: " + v2Text.getText().toString());
         }
 
-        /*Collision system = new Collision(massA, massB, va, vb, vf);
+        Collision system = new Collision(massA, massB, va, vb, vf);
 
         try {
             if (system.solveSystem()) {
@@ -104,6 +111,6 @@ public class ThreeActivity extends AppCompatActivity {
             }
         } catch (Exception error) {
             Log.e("ERROR", "Crashed due to unsolvable problem.");
-        }*/
+        }
     }
 }

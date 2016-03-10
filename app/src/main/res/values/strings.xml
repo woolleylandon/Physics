@@ -25,4 +25,7 @@
     <string name="initial_velocity_a">Initial Velocity A</string>
     <string name="initial_velocity_b">Initial Velocity B</string>
     <string name="a_is">Acceleration is</string>
+    <string name="step_velocity_name">Step Velocity Name</string>
+    <string name="step_collision_name">Step Collision Name</string>
+    <string name="step_acceleration_name">Step Acceleration Name</string>
 </resources>

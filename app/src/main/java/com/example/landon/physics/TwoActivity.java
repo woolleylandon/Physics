@@ -17,8 +17,15 @@ public class TwoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
         FontHelper.applyFont(this, findViewById(R.id.activity_two), "fonts/avenir.ttf");
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button popButton = (Button) findViewById(R.id.button);
+        Button stepButton = (Button) findViewById(R.id.step);
+        stepButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TwoActivity.this, StepAcceleration.class));
+            }
+        });
+        popButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(TwoActivity.this, PopAcceleration.class));

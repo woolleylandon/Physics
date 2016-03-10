@@ -510,14 +510,16 @@
             android:weightSum="5"
             android:gravity="center">
 
-            <TextView
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
+                android:id="@+id/step"
                 android:text="@string/solution"
                 android:textColor="#efac57"
-                android:id="@+id/textView11"
-                android:layout_gravity="center"/>
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                style="?android:attr/borderlessButtonStyle"/>
 
         </LinearLayout>
 

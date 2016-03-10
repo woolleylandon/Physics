@@ -17,11 +17,18 @@ public class OneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
         FontHelper.applyFont(this, findViewById(R.id.activity_one), "fonts/avenir.ttf");
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button popButton = (Button) findViewById(R.id.button);
+        Button stepButton = (Button) findViewById(R.id.step);
+        popButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(OneActivity.this, PopVelocity.class));
+            }
+        });
+        stepButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(OneActivity.this, StepVelocity.class));
             }
         });
     }
