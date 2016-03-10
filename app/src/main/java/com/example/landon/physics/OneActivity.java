@@ -1,6 +1,7 @@
 package com.example.landon.physics;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
@@ -31,6 +32,13 @@ public class OneActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
+    public void clearClick(View view) {
+        ((EditText) findViewById(R.id.x0Text)).getText().clear();
+        ((EditText) findViewById(R.id.xfText)).getText().clear();
+        ((EditText) findViewById(R.id.vText)).getText().clear();
+        ((EditText) findViewById(R.id.tText)).getText().clear();
+    }
+
     public void oneClick(View view) {
         EditText x0Text = (EditText) findViewById(R.id.x0Text);
         EditText xfText = (EditText) findViewById(R.id.xfText);
@@ -44,41 +52,45 @@ public class OneActivity extends AppCompatActivity {
 
         if (!x0Text.getText().toString().equals("")) {
             x0 = new Measure(Double.parseDouble(x0Text.getText().toString()), "m");
-            System.out.println("S0 is NOT empty: " + x0Text.getText().toString());
+            System.out.println("x0 is NOT empty: " + x0Text.getText().toString());
         } else {
-            System.out.println("S0 IS empty: " + x0Text.getText().toString());
+            System.out.println("x0 IS empty: " + x0Text.getText().toString());
         }
 
         if (!xfText.getText().toString().equals("")) {
             xf = new Measure(Double.parseDouble(xfText.getText().toString()), "m");
-            System.out.println("S0 is NOT empty: " + xfText.getText().toString());
+            System.out.println("xf is NOT empty: " + xfText.getText().toString());
         } else {
-            System.out.println("S0 IS empty: " + xfText.getText().toString());
+            System.out.println("xf IS empty: " + xfText.getText().toString());
         }
 
         if (!vText.getText().toString().equals("")) {
-            v = new Measure(Double.parseDouble(vText.getText().toString()), "m");
-            System.out.println("S0 is NOT empty: " + vText.getText().toString());
+            v = new Measure(Double.parseDouble(vText.getText().toString()), "m/s");
+            System.out.println("v is NOT empty: " + vText.getText().toString());
         } else {
-            System.out.println("S0 IS empty: " + vText.getText().toString());
+            System.out.println("v IS empty: " + vText.getText().toString());
         }
 
         if (!tText.getText().toString().equals("")) {
-            t = new Measure(Double.parseDouble(tText.getText().toString()), "m");
-            System.out.println("S0 is NOT empty: " + tText.getText().toString());
+            t = new Measure(Double.parseDouble(tText.getText().toString()), "s");
+            System.out.println("t is NOT empty: " + tText.getText().toString());
         } else {
-            System.out.println("S0 IS empty: " + tText.getText().toString());
+            System.out.println("t IS empty: " + tText.getText().toString());
         }
 
         MCV system = new MCV(x0, xf, v, t);
 
-        if (system.solveSystem()) {
-            x0Text.setText(system.getX0().getMagnitude() + "");
-            xfText.setText(system.getXf().getMagnitude() + "");
-            vText.setText(system.getV().getMagnitude() + "");
-            tText.setText(system.getT().getMagnitude() + "");
-        } else {
-            // say in step by step that system cannot be solved
+        try {
+            if (system.solveSystem()) {
+                x0Text.setText(system.getX0().getMagnitude() + "");
+                xfText.setText(system.getXf().getMagnitude() + "");
+                vText.setText(system.getV().getMagnitude() + "");
+                tText.setText(system.getT().getMagnitude() + "");
+            } else {
+                Log.i("INFO", "Unsolvable problem");
+            }
+        } catch (Exception error) {
+            Log.e("ERROR", "Crashed due to unsolvable problem.");
         }
     }
 }

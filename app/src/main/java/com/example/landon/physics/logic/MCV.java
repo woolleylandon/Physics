@@ -21,102 +21,54 @@ public class MCV extends PhysicsSystem implements Solvable {
         stepSolution = "";
     }
 
-    /**
-     * Returns value of x0
-     *
-     * @return
-     */
-    public Measure getX0() {
-        return x0;
-    }
-
-    /**
-     * Sets new value of x0
-     *
-     * @param
-     */
-    public void setX0(Measure x0) {
-        this.x0 = x0;
-    }
-
-    /**
-     * Returns value of xf
-     *
-     * @return
-     */
-    public Measure getXf() {
-        return xf;
-    }
-
-    /**
-     * Sets new value of xf
-     *
-     * @param
-     */
-    public void setXf(Measure xf) {
-        this.xf = xf;
-    }
-
-    /**
-     * Returns value of v
-     *
-     * @return
-     */
-    public Measure getV() {
-        return v;
-    }
-
-    /**
-     * Sets new value of v
-     *
-     * @param
-     */
-    public void setV(Measure v) {
-        this.v = v;
-    }
-
-    /**
-     * Returns value of t
-     *
-     * @return
-     */
-    public Measure getT() {
-        return t;
-    }
-
-    /**
-     * Sets new value of t
-     *
-     * @param
-     */
-    public void setT(Measure t) {
-        this.t = t;
-    }
+    // getter
+    public Measure getX0() {return x0;}
+    public Measure getXf() {return xf;}
+    public Measure getV()  {return v; }
+    public Measure getT()  {return t; }
 
     public int countUnknowns() {
         int counter = 0;
 
-        if (x0 == null) {
-            counter++;
-        }
-        ;
-        if (xf == null) {
-            counter++;
-        }
-        ;
-        if (v == null) {
-            counter++;
-        }
-        ;
-        if (t == null) {
-            counter++;
-        }
-        ;
+        if (x0 == null) {counter++;}
+        if (xf == null) {counter++;}
+        if (v == null)  {counter++;}
+        if (t == null)  {counter++;}
 
         return counter;
     }
 
     public boolean solveSystem() {
-        return false;
+            if(x0 == null && unknowns == 2 ){
+                x0 = new Measure(0,"m");
+                x0.setAssumed(true);
+                unknowns = 1;
+            }
+                if(unknowns == 1){
+            if(x0 == null){
+                    double newX0 = xf.getMagnitude() - (v.getMagnitude() * t.getMagnitude());
+                    x0 = new Measure(newX0,"m");
+                }
+
+                else if(xf == null){
+                    double newXf = x0.getMagnitude() + (v.getMagnitude() * t.getMagnitude());
+                    xf = new Measure(newXf,"m");
+                }
+
+                else if(v == null){
+                    double newV = (xf.getMagnitude() - x0.getMagnitude()) / t.getMagnitude();
+                    t = new Measure(newV,"m/s");
+                }
+
+                else if(t == null){
+                    double newT = (xf.getMagnitude() - x0.getMagnitude()) / v.getMagnitude();
+                    t = new Measure(newT,"s");
+                    if(t.getMagnitude() < 0){
+                        t.setWarning(true);
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
     }
-}

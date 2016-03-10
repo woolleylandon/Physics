@@ -24,6 +24,5 @@
     <string name="mass_b">Mass B</string>
     <string name="initial_velocity_a">Initial Velocity A</string>
     <string name="initial_velocity_b">Initial Velocity B</string>
-    <string name="first_unknowns">First, detect known and unknown variables:</string>
-    <string name="unknowns">\nUnknowns:</string>
+    <string name="a_is">Acceleration is</string>
 </resources>
