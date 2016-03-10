@@ -1,5 +1,7 @@
 package com.example.landon.physics.logic;
 
+import com.example.landon.physics.R;
+
 public class MCA extends PhysicsSystem implements Solvable {
     private Measure s0;
     private Measure sf;
@@ -438,11 +440,8 @@ public class MCA extends PhysicsSystem implements Solvable {
                 //stepSolution += "@String/replace_in_equation";
                 //stepSolution += String.format( "\n\n a = (%.3f - %.3f) / %.3f", vf.getMagnitude(), v0.getMagnitude(), t.getMagnitude());
                 //stepSolution += String.format( "\n a = %.3f %@", accelerationValue, a.getUnit());
-                stepSolution += "@string/a_is";
+                stepSolution += R.string.a_is;
             }
-
-            // debugging
-            System.out.println(stepSolution);
 
             return (countUnknowns() == 0);
 

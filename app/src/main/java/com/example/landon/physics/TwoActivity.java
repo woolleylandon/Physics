@@ -32,7 +32,16 @@ public class TwoActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
-    public void twoClick(View v) {
+    public void clearClick(View v) {
+        ((EditText) findViewById(R.id.mca_s0_txt)).getText().clear();
+        ((EditText) findViewById(R.id.mca_sf_txt)).getText().clear();
+        ((EditText) findViewById(R.id.mca_v0_txt)).getText().clear();
+        ((EditText) findViewById(R.id.mca_vf_txt)).getText().clear();
+        ((EditText) findViewById(R.id.mca_a_txt)).getText().clear();
+        ((EditText) findViewById(R.id.mca_t_txt)).getText().clear();
+    }
+
+    public void twoClick(View view) {
         EditText s0Text = (EditText) findViewById(R.id.mca_s0_txt);
         EditText sfText = (EditText) findViewById(R.id.mca_sf_txt);
         EditText v0Text = (EditText) findViewById(R.id.mca_v0_txt);

@@ -94,7 +94,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText2"
+                    android:id="@+id/mAText"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/mass_a"
@@ -161,7 +161,7 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText"
+                    android:id="@+id/mBText"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/mass_b"
@@ -227,7 +227,7 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText3"
+                    android:id="@+id/vA1Text"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/initial_velocity_a"
@@ -293,7 +293,7 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText7"
+                    android:id="@+id/vB1Text"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/initial_velocity_b"
@@ -359,7 +359,7 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText4"
+                    android:id="@+id/v2Text"
                     android:inputType="number"
                     android:textSize="20sp"
                     android:hint="@string/final_velocity"
@@ -411,7 +411,8 @@
                     android:textSize="20sp"
                     android:text="@string/clear"
                     android:textColor="#efac57"
-                    android:id="@+id/textView10"/>
+                    android:id="@+id/textView10"
+                    android:onClick="clearClick" />
 
             </LinearLayout>
 
@@ -428,7 +429,8 @@
                     android:text="@string/solve"
                     android:textSize="20sp"
                     android:textColor="#efac57"
-                    android:id="@+id/textView12"/>
+                    android:id="@+id/textView12"
+                    android:onClick="threeClick" />
 
             </LinearLayout>
 
