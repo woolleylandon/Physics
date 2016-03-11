@@ -44,10 +44,16 @@ public class Collision extends PhysicsSystem implements Solvable {
             if (massA == null) {
                 double finalMassA = (massB.getMagnitude() * vf.getMagnitude() - massA.getMagnitude() * vb.getMagnitude()) / (va.getMagnitude() - vf.getMagnitude());
                 massA = new Measure(finalMassA,"kg");
+                if(massA.getMagnitude() < 0){
+                    massA.setWarning(true);
+                }
             }
             else if (massB == null) {
                 double finalMassB = (massA.getMagnitude() * va.getMagnitude() - massA.getMagnitude() * vf.getMagnitude()) / (vf.getMagnitude() - vb.getMagnitude());
                 massB = new Measure(finalMassB,"kg");
+                if(massB.getMagnitude() < 0){
+                    massB.setWarning(true);
+                }
             }
             else if (va == null) {
                 double finalVa = ((massA.getMagnitude() + massB.getMagnitude()) * vf.getMagnitude() - massB.getMagnitude() * vb.getMagnitude())/massA.getMagnitude();
