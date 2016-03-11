@@ -20,7 +20,7 @@ public class MCVTest {
     public void setUp() throws Exception {
         //system = new MCV(new Measure(2, "m"), null, null, null);
          system = new MCV(null,null, new Measure(2, "m/s"), new Measure(1, "s"));
-        system2 = new MCV(new Measure(3,"m"),null, new Measure(2, "m/s"), new Measure(1, "s"));
+        system2 = new MCV(new Measure(3,"m"),new Measure(1,"m"), new Measure(2, "m/s"), null);
     }
 
     @After
@@ -52,5 +52,7 @@ public class MCVTest {
         System.out.println(system2.getXf().getMagnitude());
         System.out.println(system2.getV().getMagnitude());
         System.out.println(system2.getT().getMagnitude());
+
+        System.out.println(system2.getT().isWarning());
     }
 }

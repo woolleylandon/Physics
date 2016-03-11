@@ -13,6 +13,10 @@ public class MCV extends PhysicsSystem implements Solvable {
         this.x0 = x0;
         this.xf = xf;
         this.v = v;
+
+//        if(t.getMagnitude() < 0){
+//            t.setWarning(true);
+//        }
         this.t = t;
 
         solved = false;
