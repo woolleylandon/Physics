@@ -1,22 +1,50 @@
+/**
+ * Movement with Elastic Collision
+ *
+ * This class represents and Collision system and solves it
+ *
+ * @author Marco Rosas, Winson So, Landon Woolley
+ * @version 0.1
+ *
+ */
+
 package com.example.landon.physics.logic;
 
 public class Collision extends PhysicsSystem implements Solvable {
+    /**
+     * maasA represents the mass of object A
+     */
     Measure massA;
+    /**
+     * massB represents the mass of object B
+     */
     Measure massB;
+    /**
+     * va represents the velocity from object A
+     */
     Measure va;
+    /**
+     * vb represents the velocity from object B
+     */
     Measure vb;
+    /**
+     * vf represents the final velocity
+     */
     Measure vf;
 
+    /**
+     * Constructor, takes Measures as parameters. It accepts nulls.
+     *
+     * @param vf The final velocity
+     * @param vb The velocity from object B
+     * @param va The velocity from object A
+     * @param massA The mass of object A
+     * @param massB The mass of object B
+     */
     public Collision(Measure vf, Measure vb, Measure va, Measure massB, Measure massA) {
         this.vf = vf;
         this.vb = vb;
         this.va = va;
-
-//        if(massA.getMagnitude()  < 0)
-//            massA.setWarning(true);
-//        if(massB.getMagnitude() < 0)
-//            massB.setWarning(true);
-
         this.massB = massB;
         this.massA = massA;
 
@@ -33,6 +61,11 @@ public class Collision extends PhysicsSystem implements Solvable {
     public Measure getVb()    {return vb;   }
     public Measure getVf()    {return vf;   }
 
+    /**
+     * Method that counts unknown variables
+     *
+     * @return The number of unknown variables
+     */
     public int countUnknowns() {
         int counter = 0;
 
@@ -45,6 +78,13 @@ public class Collision extends PhysicsSystem implements Solvable {
         return counter;
     }
 
+    /**
+     * Method that solves the Collision system.
+     * Assigns values to those variables that had unknown values.
+     * Generates a step by step solution.
+     *
+     * @return true when the system was solve, false otherwise
+     */
     public boolean solveSystem() {
         if(unknowns == 1) {
             if (massA == null) {
