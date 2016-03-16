@@ -1,3 +1,13 @@
+/**
+ * Elastic Collision
+ *
+ * This class represents and Collision system and solves it
+ *
+ * @author Marco Rosas, Winson So, Landon Woolley
+ * @version 0.1
+ *
+ */
+
 package com.example.landon.physics.logic;
 
 public class Collision extends PhysicsSystem implements Solvable {
@@ -68,16 +78,16 @@ public class Collision extends PhysicsSystem implements Solvable {
             if (massA == null) {
                 double finalMassA = (massB.getMagnitude() * vf.getMagnitude() - massB.getMagnitude() * vb.getMagnitude()) / (va.getMagnitude() - vf.getMagnitude());
                 massA = new Measure(finalMassA,"kg");
-//                if(massA.getMagnitude() < 0){
-//                    massA.setWarning(true);
-//                }
+                if(massA.getMagnitude() < 0){
+                    massA.setWarning(true);
+                }
             }
             else if (massB == null) {
                 double finalMassB = (massA.getMagnitude() * va.getMagnitude() - massA.getMagnitude() * vf.getMagnitude()) / (vf.getMagnitude() - vb.getMagnitude());
                 massB = new Measure(finalMassB,"kg");
-//                if(massB.getMagnitude() < 0){
-//                    massB.setWarning(true);
-//                }
+                if(massB.getMagnitude() < 0){
+                    massB.setWarning(true);
+                }
             }
             else if (va == null) {
                 double finalVa = ((massA.getMagnitude() + massB.getMagnitude()) * vf.getMagnitude() - massB.getMagnitude() * vb.getMagnitude())/massA.getMagnitude();
