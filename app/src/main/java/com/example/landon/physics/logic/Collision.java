@@ -12,18 +12,11 @@ public class Collision extends PhysicsSystem implements Solvable {
         this.vb = vb;
         this.va = va;
 
-//        if(massA.getMagnitude()  < 0)
-//            massA.setWarning(true);
-//        if(massB.getMagnitude() < 0)
-//            massB.setWarning(true);
-
         this.massB = massB;
         this.massA = massA;
 
         solved = false;
-        formulas = "m₁v₁ + m₂v₂ = (m₁ + m₂)v";
         unknowns = countUnknowns();
-        //stepSolution = "";
     }
 
     // getter
