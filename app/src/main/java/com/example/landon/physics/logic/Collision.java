@@ -1,35 +1,13 @@
-/**
- * Movement with Elastic Collision
- *
- * This class represents and Collision system and solves it
- *
- * @author Marco Rosas, Winson So, Landon Woolley
- * @version 0.1
- *
- */
-
 package com.example.landon.physics.logic;
 
 public class Collision extends PhysicsSystem implements Solvable {
-    /**
-     * maasA represents the mass of object A
-     */
     Measure massA;
-    /**
-     * massB represents the mass of object B
-     */
     Measure massB;
-    /**
-     * va represents the velocity from object A
-     */
     Measure va;
     /**
      * vb represents the velocity from object B
      */
     Measure vb;
-    /**
-     * vf represents the final velocity
-     */
     Measure vf;
 
     /**

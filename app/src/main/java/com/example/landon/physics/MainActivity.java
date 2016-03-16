@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * oneClick is activated when the first problem is tapped
+     * oneClick is activated when the first problem is tapped.
      * It opens a new activity with a sliding animation
      *
-     * @param v sdfiog
+     * @param v The View v is used to adjust the view
      */
     public void oneClick(View v) {
         startActivity(new Intent(MainActivity.this, OneActivity.class));
@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * twoClick is activated when the second problem is tapped
+     * twoClick is activated when the second problem is tapped.
      * It opens a new activity with a sliding animation
      *
-     * @param v sdfiog
+     * @param v The View v is used to adjust the view
      */
     public void twoClick(View v) {
         startActivity(new Intent(MainActivity.this, TwoActivity.class));
@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * threeClick is activated when the third problem is tapped
+     * threeClick is activated when the third problem is tapped.
      * It opens a new activity with a sliding animation
      *
-     * @param v sdfiog
+     * @param v The View v is used to adjust the view
      */
     public void threeClick(View v) {
         startActivity(new Intent(MainActivity.this, ThreeActivity.class));
