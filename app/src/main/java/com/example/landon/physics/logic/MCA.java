@@ -1,5 +1,8 @@
 package com.example.landon.physics.logic;
 
+import android.graphics.Color;
+import android.widget.TextView;
+
 import com.example.landon.physics.R;
 
 public class MCA extends PhysicsSystem implements Solvable {
@@ -51,7 +54,7 @@ public class MCA extends PhysicsSystem implements Solvable {
         solved = false;
         formulas = sf_formula + "\n" + sf2_formula + "\n" + vf_formula + "\n" + vf2_formula;
         unknowns = countUnknowns();
-        //stepSolution = "";
+        stepSolution = "Initialize Step Solution";
     }
 
     public int countUnknowns() {

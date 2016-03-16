@@ -1,8 +1,11 @@
 package com.example.landon.physics;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.widget.TextView;
 
 public class StepAcceleration extends Activity {
 
@@ -16,5 +19,9 @@ public class StepAcceleration extends Activity {
         int x = dm.widthPixels;
         int y = dm.heightPixels;
         getWindow().setLayout((int) (x * 0.9), (int) (y * 0.64));
+        Intent i = getIntent();
+        String step = i.getStringExtra("Tag");
+        TextView text = (TextView) findViewById(R.id.words);
+        text.setText(step);
     }
 }

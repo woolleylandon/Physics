@@ -1,5 +1,6 @@
 package com.example.landon.physics;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import com.example.landon.physics.logic.MCA;
 import com.example.landon.physics.logic.Measure;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 public class TwoActivity extends AppCompatActivity {
 
@@ -103,11 +105,16 @@ public class TwoActivity extends AppCompatActivity {
                 vfText.setText(system.getVf().getMagnitude() + "");
                 aText.setText(system.getA().getMagnitude() + "");
                 tText.setText(system.getT().getMagnitude() + "");
+
+                Intent intent = new Intent(getApplicationContext(), StepAcceleration.class);
+                intent.putExtra("Tag", system.getStepSolution());
+                startActivity(intent);
             } else {
                 Log.i("INFO", "Unsolvable problem");
             }
         } catch (Exception error) {
             Log.e("ERROR", "Crashed due to unsolvable problem.");
+            error.printStackTrace();
         }
     }
 }

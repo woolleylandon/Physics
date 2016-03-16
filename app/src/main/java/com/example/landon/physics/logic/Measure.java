@@ -1,10 +1,10 @@
 package com.example.landon.physics.logic;
 
 public class Measure {
-    private double magnitude;
     private String unit;
     private boolean assumed;
     private boolean warning;
+    private double magnitude;
 
     /**
      * Default empty Measure constructor
