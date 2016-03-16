@@ -1,18 +1,39 @@
+/**
+ * Movement with Constant Acceleration
+ *
+ * This class represents a measure unit.
+ * It stores its magnitude and unit.
+ *
+ * @author Marco Rosas, Winson So, Landon Woolley
+ * @version 0.1
+ *
+ */
+
 package com.example.landon.physics.logic;
 
 public class Measure {
-    private String unit;
-    private boolean assumed;
-    private boolean warning;
-    private double magnitude;
 
     /**
-     * Default empty Measure constructor
+     * Stores the magnitude of the measure
      */
-    public Measure() {
-        super();
-    }
+    private double magnitude;
+    /**
+     * Stores the unit of the measure as a String
+     */
+    private String unit;
+    /**
+     * Tells if the measured has an assumed and not a calculated value
+     */
+    private boolean assumed;
+    /**
+     * Tells if the measured was calculated, but could have an error
+     */
+    private boolean warning;
 
+
+    /**
+     * Magnitude and unit constructor
+     */
     public Measure(double magnitude, String unit) {
         this(magnitude, unit, false, false);
     }
