@@ -1,16 +1,42 @@
-package com.example.landon.physics.logic;
+/**
+ * Movement with Constant Acceleration
+ *
+ * This class represents and MCA system and solves it
+ *
+ * @author Marco Rosas, Winson So, Landon Woolley
+ * @version 0.1
+ *
+ */
 
-import android.graphics.Color;
-import android.widget.TextView;
+package com.example.landon.physics.logic;
 
 import com.example.landon.physics.R;
 
 public class MCA extends PhysicsSystem implements Solvable {
+
+    /**
+     * s0 represents the starting position
+     */
     private Measure s0;
+    /**
+     * sf represents the final position
+     */
     private Measure sf;
+    /**
+     * v0 represents the starting velocity
+     */
     private Measure v0;
+    /**
+     * vf represents the final velocity
+     */
     private Measure vf;
+    /**
+     * a represents the acceleration
+     */
     private Measure a;
+    /**
+     * t represents the time
+     */
     private Measure t;
 
     // formulas
@@ -43,6 +69,16 @@ public class MCA extends PhysicsSystem implements Solvable {
         return t;
     }
 
+    /**
+     * Constructor, takes Measures as parameters. It accepts nulls.
+     *
+     * @param s0 The starting position
+     * @param sf The final position
+     * @param v0 The starting velocity
+     * @param vf The final velocity
+     * @param a The acceleration
+     * @param t The time
+     */
     public MCA(Measure s0, Measure sf, Measure v0, Measure vf, Measure a, Measure t) {
         this.s0 = s0;
         this.sf = sf;
@@ -57,6 +93,11 @@ public class MCA extends PhysicsSystem implements Solvable {
         stepSolution = "Initialize Step Solution";
     }
 
+    /**
+     * Method that counts unknown variables
+     *
+     * @return The number of unknown variables
+     */
     public int countUnknowns() {
         int counter = 0;
 
@@ -82,6 +123,13 @@ public class MCA extends PhysicsSystem implements Solvable {
         return counter;
     }
 
+    /**
+     * Method that solves the MCA system.
+     * Assigns values to those variables that had unknown values.
+     * Generates a step by step solution.
+     *
+     * @return true when the system was solve, false otherwise
+     */
     public boolean solveSystem() {
 
         //stepSolution = "@String/first_unknowns";
