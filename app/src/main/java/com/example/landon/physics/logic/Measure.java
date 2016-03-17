@@ -33,6 +33,9 @@ public class Measure {
 
     /**
      * Magnitude and unit constructor
+     *
+     * @param unit asdf
+     * @param magnitude asdf
      */
     public Measure(double magnitude, String unit) {
         this(magnitude, unit, false, false);
@@ -40,6 +43,11 @@ public class Measure {
 
     /**
      * Default Measure constructor
+     *
+     * @param unit asdf
+     * @param magnitude asdf
+     * @param assumed asdf
+     * @param warning asdf
      */
     public Measure(double magnitude, String unit, boolean assumed, boolean warning) {
         super();
@@ -52,7 +60,7 @@ public class Measure {
     /**
      * Returns value of magnitude
      *
-     * @return
+     * @return magnitude
      */
     public double getMagnitude() {
         return magnitude;
@@ -61,7 +69,7 @@ public class Measure {
     /**
      * Sets new value of magnitude
      *
-     * @param
+     * @param magnitude asdf
      */
     public void setMagnitude(double magnitude) {
         this.magnitude = magnitude;
@@ -70,7 +78,7 @@ public class Measure {
     /**
      * Returns value of unit
      *
-     * @return
+     * @return unit
      */
     public String getUnit() {
         return unit;
@@ -79,7 +87,7 @@ public class Measure {
     /**
      * Sets new value of unit
      *
-     * @param
+     * @param unit asdf
      */
     public void setUnit(String unit) {
         this.unit = unit;
@@ -88,7 +96,7 @@ public class Measure {
     /**
      * Returns value of assumed
      *
-     * @return
+     * @return assumed
      */
     public boolean isAssumed() {
         return assumed;
@@ -97,7 +105,7 @@ public class Measure {
     /**
      * Sets new value of assumed
      *
-     * @param
+     * @param assumed asdf
      */
     public void setAssumed(boolean assumed) {
         this.assumed = assumed;
@@ -106,7 +114,7 @@ public class Measure {
     /**
      * Returns value of warning
      *
-     * @return
+     * @return  warning
      */
     public boolean isWarning() {
         return warning;
@@ -115,7 +123,7 @@ public class Measure {
     /**
      * Sets new value of warning
      *
-     * @param
+     * @param warning asdf
      */
     public void setWarning(boolean warning) {
         this.warning = warning;

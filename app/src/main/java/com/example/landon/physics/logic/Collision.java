@@ -37,7 +37,6 @@ public class Collision extends PhysicsSystem implements Solvable {
         this.massA = massA;
 
         solved = false;
-        formulas = "m₁v₁ + m₂v₂ = (m₁ + m₂)v";
         unknowns = countUnknowns();
         //stepSolution = "";
     }
