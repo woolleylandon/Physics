@@ -73,7 +73,7 @@ public class MCA extends PhysicsSystem implements Solvable {
         return t;
     }
 
-    public void setContext(Context c){
+    public void setContext(Context c) {
         context = c;
     }
 
@@ -84,8 +84,8 @@ public class MCA extends PhysicsSystem implements Solvable {
      * @param sf The final position
      * @param v0 The starting velocity
      * @param vf The final velocity
-     * @param a The acceleration
-     * @param t The time
+     * @param a  The acceleration
+     * @param t  The time
      */
     public MCA(Measure s0, Measure sf, Measure v0, Measure vf, Measure a, Measure t) {
         this.s0 = s0;
@@ -508,6 +508,7 @@ public class MCA extends PhysicsSystem implements Solvable {
 
         } // 2 unknowns cases
 
+        
         // case not found
         return false;
     }
