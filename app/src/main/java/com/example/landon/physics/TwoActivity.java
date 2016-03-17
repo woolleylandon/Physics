@@ -97,6 +97,8 @@ public class TwoActivity extends AppCompatActivity {
 
         MCA system = new MCA(s0, sf, v0, vf, a, t);
 
+        system.setContext(getApplicationContext());
+
         try {
             if (system.solveSystem()) {
                 s0Text.setText(system.getS0().getMagnitude() + "");

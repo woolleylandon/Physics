@@ -10,6 +10,8 @@
 
 package com.example.landon.physics.logic;
 
+import android.content.Context;
+
 import com.example.landon.physics.R;
 
 public class MCA extends PhysicsSystem implements Solvable {
@@ -38,6 +40,8 @@ public class MCA extends PhysicsSystem implements Solvable {
      * t represents the time
      */
     private Measure t;
+
+    private Context context;
 
     // formulas
     String sf_formula = "sf = s₀ + v₀t + ½at²";
@@ -69,6 +73,10 @@ public class MCA extends PhysicsSystem implements Solvable {
         return t;
     }
 
+    public void setContext(Context c){
+        context = c;
+    }
+
     /**
      * Constructor, takes Measures as parameters. It accepts nulls.
      *
@@ -90,7 +98,7 @@ public class MCA extends PhysicsSystem implements Solvable {
         solved = false;
         formulas = sf_formula + "\n" + sf2_formula + "\n" + vf_formula + "\n" + vf2_formula;
         unknowns = countUnknowns();
-        stepSolution = "Initialize Step Solution";
+        stepSolution = "";
     }
 
     /**
@@ -132,7 +140,7 @@ public class MCA extends PhysicsSystem implements Solvable {
      */
     public boolean solveSystem() {
 
-        //stepSolution = "@String/first_unknowns";
+        stepSolution = context.getString(R.string.first_unknowns);
 
         String variables = "";
 
@@ -491,7 +499,9 @@ public class MCA extends PhysicsSystem implements Solvable {
                 //stepSolution += "@String/replace_in_equation";
                 //stepSolution += String.format( "\n\n a = (%.3f - %.3f) / %.3f", vf.getMagnitude(), v0.getMagnitude(), t.getMagnitude());
                 //stepSolution += String.format( "\n a = %.3f %@", accelerationValue, a.getUnit());
-                stepSolution += R.string.a_is;
+
+                String text = context.getString(R.string.a_is);
+                stepSolution += text;
             }
 
             return (countUnknowns() == 0);
