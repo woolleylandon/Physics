@@ -5,7 +5,7 @@
     <string name="activity_two_name">恒加速的運動</string>
     <string name="activity_three_name">完全非彈性碰撞</string>
     <string name="settings">設定</string>
-    <string name="acceleration_equation"></string>
+    <string name="acceleration_equation">加速度方程式</string>
     <string name="acceleration">加速度</string>
     <string name="activity_one_name">恒速度的運動</string>
     <string name="clear">清除</string>
@@ -20,5 +20,7 @@
     <string name="mass_b">質量B</string>
     <string name="pop_acceleration_name"></string>
     <string name="solution">題解</string>
-    <string name="solve"></string>
+    <string name="solve">答案</string>
+    <string name="time">時間</string>
+    <string name="velocity">速度</string>
 </resources>
