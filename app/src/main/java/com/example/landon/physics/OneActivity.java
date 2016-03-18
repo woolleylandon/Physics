@@ -87,17 +87,24 @@ public class OneActivity extends AppCompatActivity {
 
         MCV system = new MCV(x0, xf, v, t);
 
+        system.setContext(getApplicationContext());
+
         try {
             if (system.solveSystem()) {
                 x0Text.setText(system.getX0().getMagnitude() + "");
                 xfText.setText(system.getXf().getMagnitude() + "");
                 vText.setText(system.getV().getMagnitude() + "");
                 tText.setText(system.getT().getMagnitude() + "");
+
+                Intent intent = new Intent(getApplicationContext(), StepAcceleration.class);
+                intent.putExtra("Tag", system.getStepSolution());
+                startActivity(intent);
             } else {
                 Log.i("INFO", "Unsolvable problem");
             }
         } catch (Exception error) {
             Log.e("ERROR", "Crashed due to unsolvable problem.");
+            error.printStackTrace();
         }
     }
 }

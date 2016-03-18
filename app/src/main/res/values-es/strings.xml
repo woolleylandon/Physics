@@ -23,4 +23,11 @@
     <string name="final_position">Posición final</string>
     <string name="first_unknowns">Primero, detecta las variables conocidas y las incógintas:</string>
     <string name="unknowns">Incógintas:</string>
+    <string name="starting_position_is0">\n\nLa posición inicial (s0) está vacía, se asume que vale 0.0</string>
+    <string name="x0_is">\n\nCalcula la posición inicial (x₀)\nDespéjala de la fórmula:</string>
+    <string name="replace_in_equation">\n\nReemplaza los valores en la ecuación.</string>
+    <string name="xf_is">\n\nLa posición final (xf) se calcula con la fórmula:</string>
+    <string name="v_is">\n\nCalcula la velocidad\nDespéjala de la fórmula:</string>
+    <string name="t_is">\n\nCalcula el tiempo\nDespéjalo de la fórmula:</string>
+    <string name="t_is_negative_warn">\n⚠️El Tiempo tradicionalmente no es negativo en Física.\nVerifica tus valores de nuevo.</string>
 </resources>
