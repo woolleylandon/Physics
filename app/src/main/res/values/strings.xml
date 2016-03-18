@@ -28,4 +28,7 @@
     <string name="step_velocity_name">Step Velocity Name</string>
     <string name="step_collision_name">Step Collision Name</string>
     <string name="step_acceleration_name">Step Acceleration Name</string>
+    <string name="vf_formula">"vf = vâ‚€ + at"</string>
+    <string name="unknowns">Unknowns</string>
+    <string name="first_unknowns">First , it detects the known variables and unknowns</string>
 </resources>
