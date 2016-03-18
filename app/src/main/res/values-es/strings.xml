@@ -22,5 +22,5 @@
     <string name="final_velocity">Velocidad final</string>
     <string name="final_position">Posición final</string>
     <string name="first_unknowns">Primero, detecta las variables conocidas y las incógintas:</string>
-    <string name="unknowns">\nIncógintas: </string>
+    <string name="unknowns">Incógintas:</string>
 </resources>
