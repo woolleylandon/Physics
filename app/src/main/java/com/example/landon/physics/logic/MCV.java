@@ -45,7 +45,7 @@ public class MCV extends PhysicsSystem implements Solvable {
         solved = false;
         formulas = "sf = s₀ + v*t";
         unknowns = countUnknowns();
-        stepSolution = "";
+        stepSolution = "Solution coming soon..";
     }
 
     // getter
@@ -81,8 +81,14 @@ public class MCV extends PhysicsSystem implements Solvable {
 
         String variables = "";
 
-        variables += "\ns₀ = ";
+        variables += "x₀ = ";
         variables += x0 == null ? "?" : x0.getMagnitude() + " " + x0.getUnit();
+        variables += "xf = ";
+        variables += xf == null ? "?" : xf.getMagnitude() + " " + xf.getUnit();
+        variables += "v = ";
+        variables += v == null ? "?" : v.getMagnitude() + " " + v.getUnit();
+        variables += "t = ";
+        variables += t == null ? "?" : t.getMagnitude() + " " + t.getUnit();
 
 
             if(x0 == null && unknowns == 2 ){

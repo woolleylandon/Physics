@@ -73,6 +73,7 @@ public class Collision extends PhysicsSystem implements Solvable {
      * @return true when the system was solve, false otherwise
      */
     public boolean solveSystem() {
+
         if(unknowns == 1) {
             if (massA == null) {
                 double finalMassA = (massB.getMagnitude() * vf.getMagnitude() - massB.getMagnitude() * vb.getMagnitude()) / (va.getMagnitude() - vf.getMagnitude());
