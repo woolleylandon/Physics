@@ -34,17 +34,17 @@
     </style>
 
     <string
-        name="va1">
+        name="va1" translatable="false">
         <html>vA<sup><small>1</small></sup></html>
     </string>
 
     <string
-        name="vb1">
+        name="vb1" translatable="false">
         <html>vB<sup><small>1</small></sup></html>
     </string>
 
     <string
-        name="v2">
+        name="v2" translatable="false">
         <html>v<sup><small>2</small></sup></html>
     </string>
 

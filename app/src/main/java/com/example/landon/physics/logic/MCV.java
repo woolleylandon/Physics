@@ -10,6 +10,10 @@
 
 package com.example.landon.physics.logic;
 
+import android.content.Context;
+
+import com.example.landon.physics.R;
+
 public class MCV extends PhysicsSystem implements Solvable {
     /**
      * x0 represents the starting position
@@ -28,6 +32,13 @@ public class MCV extends PhysicsSystem implements Solvable {
      */
     private Measure t;
 
+    private String xf_formula = "xf = x₀ + v(t)";
+    private String x0_formula = "x₀ = xf - v(t)";
+    private String v_formula = "v = (xf - x₀) / t";
+    private String t_formula = "t = (xf - x₀) / v";
+
+    private Context context;
+
     /**
      * Constructor, takes Measures as parameters. It accepts nulls.
      *
@@ -45,7 +56,7 @@ public class MCV extends PhysicsSystem implements Solvable {
         solved = false;
         formulas = "sf = s₀ + v*t";
         unknowns = countUnknowns();
-        stepSolution = "Solution coming soon..";
+        stepSolution = "";
     }
 
     // getter
@@ -53,6 +64,10 @@ public class MCV extends PhysicsSystem implements Solvable {
     public Measure getXf() {return xf;}
     public Measure getV()  {return v; }
     public Measure getT()  {return t; }
+
+    public void setContext(Context c) {
+        context = c;
+    }
 
     /**
      * Method that counts unknown variables
@@ -81,46 +96,90 @@ public class MCV extends PhysicsSystem implements Solvable {
 
         String variables = "";
 
-        variables += "x₀ = ";
+        variables += "\nx₀ = ";
         variables += x0 == null ? "?" : x0.getMagnitude() + " " + x0.getUnit();
-        variables += "xf = ";
+        variables += "\nxf = ";
         variables += xf == null ? "?" : xf.getMagnitude() + " " + xf.getUnit();
-        variables += "v = ";
+        variables += "\nv = ";
         variables += v == null ? "?" : v.getMagnitude() + " " + v.getUnit();
-        variables += "t = ";
+        variables += "\nt = ";
         variables += t == null ? "?" : t.getMagnitude() + " " + t.getUnit();
 
+        stepSolution += variables;
+        stepSolution += context.getString(R.string.unknowns);
+        stepSolution += unknowns;
 
-            if(x0 == null && unknowns == 2 ){
-                x0 = new Measure(0,"m");
-                x0.setAssumed(true);
-                unknowns = 1;
-            }
-                if(unknowns == 1){
-            if(x0 == null){
-                    double newX0 = xf.getMagnitude() - (v.getMagnitude() * t.getMagnitude());
-                    x0 = new Measure(newX0,"m");
-                }
 
-                else if(xf == null){
-                    double newXf = x0.getMagnitude() + (v.getMagnitude() * t.getMagnitude());
-                    xf = new Measure(newXf,"m");
-                }
+        if(x0 == null && unknowns == 2 ){
+            x0 = new Measure(0,"m");
+            x0.setAssumed(true);
+            unknowns = countUnknowns();
 
-                else if(v == null){
-                    double newV = (xf.getMagnitude() - x0.getMagnitude()) / t.getMagnitude();
-                    t = new Measure(newV,"m/s");
-                }
-
-                else if(t == null){
-                    double newT = (xf.getMagnitude() - x0.getMagnitude()) / v.getMagnitude();
-                    t = new Measure(newT,"s");
-                    if(t.getMagnitude() < 0){
-                        t.setWarning(true);
-                    }
-                }
-                return true;
-            }
-            return false;
+            // step by step solution
+            stepSolution += context.getString(R.string.starting_position_is0);
+            stepSolution += context.getString(R.string.unknowns);
+            stepSolution += unknowns;
         }
+
+        if(unknowns == 1){
+            if(x0 == null){
+                double initialPositionValue = xf.getMagnitude() - (v.getMagnitude() * t.getMagnitude());
+                x0 = new Measure(initialPositionValue,"m");
+
+                // step by step solution
+                stepSolution += context.getString(R.string.x0_is);
+                stepSolution += "\n" + xf_formula;
+                stepSolution += "\n" + x0_formula;
+                stepSolution += context.getString(R.string.replace_in_equation);
+                stepSolution += String.format( "\n x0 = %.3f - %.3f(%.3f)", xf.getMagnitude(), v.getMagnitude(), t.getMagnitude());
+                stepSolution += String.format( "\n x0 = %.3f %s", initialPositionValue, x0.getUnit());
+            }
+            else if(xf == null){
+                double finalPositionValue = x0.getMagnitude() + (v.getMagnitude() * t.getMagnitude());
+                xf = new Measure(finalPositionValue,"m");
+
+                // step by step solution
+                stepSolution += context.getString(R.string.xf_is);
+                stepSolution += "\n" + xf_formula;
+                stepSolution += context.getString(R.string.replace_in_equation);
+                stepSolution += String.format("\n xf = %.3f + %.3f(%.3f)", x0.getMagnitude(), v.getMagnitude(), t.getMagnitude());
+                stepSolution += String.format("\n xf = %.3f %s", finalPositionValue, xf.getUnit());
+            }
+
+            else if(v == null){
+                double velocityValue = (xf.getMagnitude() - x0.getMagnitude()) / t.getMagnitude();
+                v = new Measure(velocityValue,"m/s");
+
+                // step by step solution
+                stepSolution += context.getString(R.string.v_is);
+                stepSolution += "\n" + xf_formula;
+                stepSolution += "\n" + v_formula;
+                stepSolution += context.getString(R.string.replace_in_equation);
+                stepSolution += String.format( "\n v = (%.3f - %.3f) / %.3f", xf.getMagnitude(), x0.getMagnitude(), t.getMagnitude());
+                stepSolution += String.format( "\n v = %.3f %s", velocityValue, v.getUnit());
+            }
+
+            else if(t == null){
+                double timeValue = (xf.getMagnitude() - x0.getMagnitude()) / v.getMagnitude();
+                t = new Measure(timeValue,"s");
+
+                // step by step solution
+                stepSolution += context.getString(R.string.t_is);
+                stepSolution += "\n" + xf_formula;
+                stepSolution += "\n" + t_formula;
+                stepSolution += context.getString(R.string.replace_in_equation);
+                stepSolution += String.format( "\n t = (%.3f - %.3f) / %.3f", xf.getMagnitude(), x0.getMagnitude(), v.getMagnitude(), timeValue);
+                stepSolution += String.format( "\n t = %.3f %s", timeValue, t.getUnit());
+
+                
+                if(t.getMagnitude() < 0){
+                    t.setWarning(true);
+
+                    stepSolution += context.getString(R.string.t_is_negative_warn);
+                }
+            }
+            return true;
+        }
+        return false;
     }
+}

@@ -29,6 +29,13 @@
     <string name="step_collision_name">Step Collision Name</string>
     <string name="step_acceleration_name">Step Acceleration Name</string>
     <string name="vf_formula">"vf = vâ‚€ + at"</string>
-    <string name="unknowns">Unknowns</string>
+    <string name="unknowns">\nUnknowns: </string>
     <string name="first_unknowns">First , it detects the known and unknown variables</string>
+    <string name="starting_position_is0">\n\nStarting position (s0) is empty, it is assumed to be 0.0</string>
+    <string name="x0_is">\n\nCalculate Initial Position (x₀)\nFind it in equation:</string>
+    <string name="replace_in_equation">\n\nReplace values in equation.</string>
+    <string name="xf_is">\n\nFinal Position (xf) is calculated with formula:</string>
+    <string name="v_is">\n\nCalculate Velocity\nFind it in equation:</string>
+    <string name="t_is">\n\nCalculate Time\nFind it in equation:</string>
+    <string name="t_is_negative_warn">\n⚠️Time is traditionally not negative in Physics.\nCheck your inputs again.</string>
 </resources>
