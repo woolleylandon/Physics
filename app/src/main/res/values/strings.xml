@@ -29,7 +29,7 @@
     <string name="step_collision_name">Step Collision Name</string>
     <string name="step_acceleration_name">Step Acceleration Name</string>
     <string name="vf_formula">"vf = vâ‚€ + at"</string>
-    <string name="unknowns">Unknowns</string>
+    <string name="unknowns">\nUnknowns: </string>
     <string name="first_unknowns">First , it detects the known and unknown variables</string>
     <string name="starting_position_is0">\n\nStarting position (s0) is empty, it is assumed to be 0.0</string>
     <string name="x0_is">\n\nCalculate Initial Position (x₀)\nFind it in equation:</string>
