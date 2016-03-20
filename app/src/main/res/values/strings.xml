@@ -38,4 +38,16 @@
     <string name="v_is">\n\nCalculate Velocity\nFind it in equation:</string>
     <string name="t_is">\n\nCalculate Time\nFind it in equation:</string>
     <string name="t_is_negative_warn">\n⚠️Time is traditionally not negative in Physics.\nCheck your inputs again.</string>
+    <string name="this_many_unknowns">The amount of unknowns you have is:</string>
+    <string name="unknowns_number">#insert number of unknowns#</string>
+    <string name="starting_position_is_0">The starting position is at 0</string>
+    <string name="missing_vs_mca">Missing VS MCA</string>
+    <string name="positive_a_mca">Positive A MCA</string>
+    <string name="negative_a_mca">Negative A MCA</string>
+    <string name="missing_both_velocities">Error: you are missing both velocities, you must have at least one.</string>
+    <string name="t_is_negative_warning">Warning: T is negative</string>
+    <string name="v0_is">V0 is</string>
+    <string name="vf_is">VF is</string>
+    <string name="sf_is">SF is</string>
+    <string name="sf2_formula">SF2 Forumla</string>
 </resources>

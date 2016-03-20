@@ -9,11 +9,8 @@
  */
 
 package com.example.landon.physics.logic;
-
 import android.content.Context;
-
 import com.example.landon.physics.R;
-
 public class MCA extends PhysicsSystem implements Solvable {
 
     /**
@@ -42,8 +39,8 @@ public class MCA extends PhysicsSystem implements Solvable {
     private Measure t;
 
     private Context context;
-
     // formulas
+    String some_formula = "t = (vf - v₀) / a";
     String sf_formula = "sf = s₀ + v₀t + ½at²";
     String sf2_formula = "sf = s₀ + ½(vf + v₀)t";
     String vf_formula = "vf = v₀ + at";
@@ -98,7 +95,7 @@ public class MCA extends PhysicsSystem implements Solvable {
         solved = false;
         formulas = sf_formula + "\n" + sf2_formula + "\n" + vf_formula + "\n" + vf2_formula;
         unknowns = countUnknowns();
-        stepSolution = "";
+        stepSolution = "\tStep by step solution is\t\nunavailable due to empty inputs.";
     }
 
     /**
@@ -157,43 +154,40 @@ public class MCA extends PhysicsSystem implements Solvable {
         variables += "\nt = ";
         variables += t == null ? "?" : t.getMagnitude() + " " + t.getUnit();
 
-        //stepSolution += variables;
-        //stepSolution += "@String/unknowns";
-        //stepSolution += unknowns;
+        stepSolution += variables;
+        stepSolution = context.getString(R.string.this_many_unknowns);
+        stepSolution = context.getString(R.string.unknowns_number);
 
         // in case s0 and sf are null s0 is assumed to be 0
         if (s0 == null && unknowns > 2) {
 
             s0 = new Measure(0, "m");
             s0.setAssumed(true);
-
-            // step by step solution
-            //stepSolution += "@String/starting_position_is0";
-            //stepSolution += "@String/unknowns";
-            //stepSolution += unknowns;
+            stepSolution = context.getString(R.string.starting_position_is_0);
+            stepSolution = context.getString(R.string.this_many_unknowns);
+            stepSolution = context.getString(R.string.unknowns_number);
         }
 
         // in case v0 and vf are null and a != null v0 or vf is assumed to be 0 depending on accelaration magnitude
         if (v0 == null && vf == null && a != null) {
 
-            // step by step solution
-            //stepSolution += "@String/missing_Vs_mca";
+            stepSolution = context.getString(R.string.missing_vs_mca);
 
             if (a.getMagnitude() > 0) {
                 v0 = new Measure(0, "m/s");
                 v0.setAssumed(true);
 
-                //stepSolution += "@String/positive_a_mca";
-                //stepSolution += "@String/unknowns";
-                //stepSolution += unknowns;
+                stepSolution = context.getString(R.string.positive_a_mca);
+                stepSolution = context.getString(R.string.this_many_unknowns);
+                stepSolution = context.getString(R.string.unknowns_number);
 
             } else {
                 vf = new Measure(0, "m/s");
                 vf.setAssumed(true);
 
-                //stepSolution += "@String/negative_a_mca";
-                //stepSolution += "@String/unknowns";
-                //stepSolution += unknowns;
+                stepSolution = context.getString(R.string.negative_a_mca);
+                stepSolution = context.getString(R.string.this_many_unknowns);
+                stepSolution = context.getString(R.string.unknowns_number);
             }
         }
 
@@ -203,8 +197,7 @@ public class MCA extends PhysicsSystem implements Solvable {
             // Unsolvable case (v0 && vf == null)
             if (v0 == null && vf == null) {
 
-                // step by step solution
-                //stepSolution += "@String/missing_both_velocities";
+                stepSolution = context.getString(R.string.missing_both_velocities);
 
                 return false;
             }
@@ -219,16 +212,16 @@ public class MCA extends PhysicsSystem implements Solvable {
                     double timeValue = (vf.getMagnitude() - v0.getMagnitude()) / a.getMagnitude();
                     t = new Measure(timeValue, "s");
 
-                    // step by step solution
-                    //stepSolution += "@String/t_is";
-                    //stepSolution += "\n" + vf_formula;
-                    //stepSolution += "\n t = (vf - v₀) / a";
-                    //stepSolution += "@String/replace_in_equation";
-                    //stepSolution += String.format("\n t = (%.3f - %.3f) / %.3f", vf.getMagnitude(), v0.getMagnitude(), a.getMagnitude());
-                    //stepSolution += String.format("\n t = %.3f %s", timeValue, t.getUnit());
+                    stepSolution = context.getString(R.string.t_is);
+                    stepSolution = context.getString(R.string.vf_formula);
+                    //stepSolution += some_forumla;
+                    stepSolution = context.getString(R.string.replace_in_equation);
+                    stepSolution = context.getString(R.string.missing_both_velocities);
+                    //stepSolution = context.getString(R.string.t = (%.3f - %.3f) / %.3f", vf.getMagnitude(), v0.getMagnitude(), a.getMagnitude());
+                    //stepSolution = context.getString(t = %.3f %s", timeValue, t.getUnit());
 
                     if (t.getMagnitude() < 0) {
-                        //stepSolution += "@String/t_is_negative_warn";
+                        stepSolution = context.getString(R.string.t_is_negative_warning);
                         t.setWarning(true);
                     }
                 }
@@ -240,13 +233,12 @@ public class MCA extends PhysicsSystem implements Solvable {
                     double initialVelocityValue = vf.getMagnitude() - a.getMagnitude() * t.getMagnitude();
                     v0 = new Measure(initialVelocityValue, "m/s");
 
-                    // step by step solution
-                    //stepSolution += "@String/v0_is";
-                    //stepSolution += "\n" + vf_formula;
-                    //stepSolution += "\n v₀ = vf - a(t)";
-                    //stepSolution += "@String/replace_in_equation";
-                    //stepSolution += String.format("\n\n v₀ = %.3f - %.3f(%.3f)", vf.getMagnitude(), a.getMagnitude(), t.getMagnitude());
-                    //stepSolution += String.format( "\n v₀ = %.3f %s", initialVelocityValue, v0.getUnit());
+                    stepSolution = context.getString(R.string.v0_is);
+                    stepSolution = context.getString(R.string.vf_formula);
+                    //stepSolution = context.getString(R.string.v₀ = vf - a(t));
+                    stepSolution = context.getString(R.string.replace_in_equation);
+                    //stepSolution = context.getString(R.string.v₀ = %.3f - %.3f(%.3f)", vf.getMagnitude(), a.getMagnitude(), t.getMagnitude());
+                    //stepSolution = context.getString(R.string.v₀ = %.3f %s", initialVelocityValue, v0.getUnit());
                 }
 
                 // CASE 3 or 7 calculate FINAL VELOCITY
@@ -257,12 +249,12 @@ public class MCA extends PhysicsSystem implements Solvable {
 
                     vf = new Measure(finalVelocityValue, "m/s");
 
-                    // step by step solution
-                    //stepSolution += "@String/vf_is";
-                    //stepSolution += "\n" + vf_formula;
-                    //stepSolution += "@String/replace_in_equation";
-                    //stepSolution += String.format( "\n\n vf = %.3f + %.3f(%.3f)", v0.getMagnitude(), a.getMagnitude(), t.getMagnitude());
-                    //stepSolution += String.format( "\n vf = %.3f %@", finalVelocityValue, vf.getUnit());
+
+                    stepSolution = context.getString(R.string.vf_is);
+                    stepSolution = context.getString(R.string.vf_formula);
+                    stepSolution = context.getString(R.string.replace_in_equation);
+                    //stepSolution = context.getString(R.string.vf = %.3f + %.3f(%.3f)", v0.getMagnitude(), a.getMagnitude(), t.getMagnitude());
+                    //stepSolution = context.getString(R.string.vf = %.3f %@", finalVelocityValue, vf.getUnit());
                 }
 
                 // CASE 4 or 8 calculate ACCELERATION
@@ -273,13 +265,12 @@ public class MCA extends PhysicsSystem implements Solvable {
 
                     a = new Measure(accelerationValue, "m/s²");
 
-                    // step by step solution
-                    //stepSolution += "@string/a_is";
-                    //stepSolution += "\n" + vf_formula;
-                    //stepSolution += "\n a = (vf - v₀) / (t)";
-                    //stepSolution += "@String/replace_in_equation";
-                    //stepSolution += String.format( "\n\n a = (%.3f - %.3f) / %.3f", vf.getMagnitude(), v0.getMagnitude(), t.getMagnitude());
-                    //stepSolution += String.format( "\n a = %.3f %@", accelerationValue, a.getUnit());
+                    stepSolution = context.getString(R.string.a_is);
+                    stepSolution = context.getString(R.string.vf_formula);
+                    //stepSolution = context.getString(R.string.a = (vf - v₀) / (t));
+                    stepSolution = context.getString(R.string.replace_in_equation);
+                    //stepSolution = context.getString(R.string.a = (%.3f - %.3f) / %.3f", vf.getMagnitude(), v0.getMagnitude(), t.getMagnitude());
+                    //stepSolution = context.getString(R.string.a = %.3f %@", accelerationValue, a.getUnit());
                 }
 
                 // calculates FINAL POSITION if needed
@@ -290,12 +281,11 @@ public class MCA extends PhysicsSystem implements Solvable {
 
                     sf = new Measure(finalDistanceValue, "m");
 
-                    // description for step by step solution
-                    //stepSolution += "@String/sf_is";
-                    //stepSolution += "\n" + sf2_formula;
-                    //stepSolution += "@String/replace_in_equation";
-                    //stepSolution += String.format( "\n sf = %.3f  + ½(%.3f + %.3f)%.3f²", s0.getMagnitude(), vf.getMagnitude(), v0.getMagnitude(), t.getMagnitude());
-                    //stepSolution += String.format( "\n sf = %.3f %@", finalDistanceValue, sf.getUnit());
+                    stepSolution = context.getString(R.string.sf_is);
+                    stepSolution = context.getString(R.string.sf2_formula);
+                    stepSolution = context.getString(R.string.replace_in_equation);
+                    //stepSolution = context.getString(R.string.sf = %.3f  + ½(%.3f + %.3f)%.3f²", s0.getMagnitude(), vf.getMagnitude(), v0.getMagnitude(), t.getMagnitude());
+                    //stepSolution = context.getString(R.string.sf = %.3f %@", finalDistanceValue, sf.getUnit());
                 }
                 // calculates INITIAL POSITION if needed
                 else if (s0 == null) {
