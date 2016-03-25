@@ -67,16 +67,10 @@ public class TwoActivity extends AppCompatActivity {
 
         if (!s0Text.getText().toString().equals("")) {
             s0 = new Measure(Double.parseDouble(s0Text.getText().toString()), "m");
-            Log.i("INFO", "S0 is NOT empty: " + s0Text.getText().toString());
-        } else {
-            Log.i("INFO", "S0 IS empty: " + s0Text.getText().toString());
         }
 
         if (!sfText.getText().toString().equals("")) {
             sf = new Measure(Double.parseDouble(sfText.getText().toString()), "m");
-            Log.i("INFO", "Sf is NOT empty: " + sfText.getText().toString());
-        } else {
-            Log.i("INFO", "Sf IS empty: " + sfText.getText().toString());
         }
 
         if (!v0Text.getText().toString().equals("")) {
