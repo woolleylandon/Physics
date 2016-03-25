@@ -206,7 +206,7 @@ public class MCA extends PhysicsSystem implements Solvable {
                     stepSolution = String.format("t = %.3f %s", timeValue, t.getUnit());
 
                     if (t.getMagnitude() < 0) {
-                        stepSolution = context.getString(R.string.t_is_negative_warning);
+                        stepSolution = context.getString(R.string.t_is_negative_warn);
                         t.setWarning(true);
                     }
                 }

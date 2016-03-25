@@ -49,12 +49,12 @@
     </string>
 
     <string
-        name="velocity_equation">
+        name="velocity_equation" translatable="false">
         <html>xf = x<sub><small>0</small></sub> + v(t)</html>
     </string>
 
     <string
-        name="acceleration_equation">
+        name="acceleration_equation" translatable="false">
         <html>s = s<sub><small>0</small></sub> + v<sub><small>0</small></sub>t + ½at²\n\n</html>
         <html>v = v<sub><small>0</small></sub> + at\n\n</html>
         <html>v² = v<sub><small>0</small></sub>² + 2a(s - s<sub><small>0</small></sub>)\n\n</html>
@@ -62,7 +62,7 @@
     </string>
 
     <string
-        name="collisions_equation">
+        name="collisions_equation" translatable="false">
         <html>Conversion of momentum:\n\n</html>
         <html>mAvA<sub><small>1</small></sub> + mBvB<sub><small>1</small></sub> = (mA + mB)v<sub><snall>2</snall></sub>\n\n</html>
         <html>Kinetic energy:\n\n</html>
