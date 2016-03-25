@@ -106,15 +106,18 @@ public class MCV extends PhysicsSystem implements Solvable {
      * @return true when the system was solve, false otherwise
      */
     public boolean solveSystem() {
+
+        stepSolution += context.getString(R.string.first_unknowns);
+
         String variables = "";
         variables += "\nx0 = ";
-        variables += x0 == null ? "0" : x0.getMagnitude() + " " + x0.getUnit();
+        variables += x0 == null ? "?" : x0.getMagnitude() + " " + x0.getUnit();
         variables += "\nxf = ";
-        variables += xf == null ? "0" : xf.getMagnitude() + " " + xf.getUnit();
+        variables += xf == null ? "?" : xf.getMagnitude() + " " + xf.getUnit();
         variables += "\nv = ";
-        variables += v == null ? "0" : v.getMagnitude() + " " + v.getUnit();
+        variables += v == null ? "?" : v.getMagnitude() + " " + v.getUnit();
         variables += "\nt = ";
-        variables += t == null ? "0" : t.getMagnitude() + " " + t.getUnit();
+        variables += t == null ? "?" : t.getMagnitude() + " " + t.getUnit();
 
         stepSolution += variables;
         stepSolution += context.getString(R.string.unknowns);
