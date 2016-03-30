@@ -14,9 +14,9 @@
     <string name="clear">Clear</string>
     <string name="solve">Solve</string>
     <string name="solution">Step by step solution</string>
-    <string name="pop_velocity_name">Pop Velocity Name</string>
-    <string name="pop_acceleration_name">Pop Acceleration Name</string>
-    <string name="pop_collisions_name">Pop Collisions Name</string>
+    <string name="pop_velocity_name" translatable="false">Pop Velocity Name</string>
+    <string name="pop_acceleration_name" translatable="false">Pop Acceleration Name</string>
+    <string name="pop_collisions_name" translatable="false">Pop Collisions Name</string>
     <string name="acceleration">Acceleration</string>
     <string name="final_velocity">Final Velocity</string>
     <string name="initial_velocity">Initial Velocity</string>
@@ -24,20 +24,36 @@
     <string name="mass_b">Mass B</string>
     <string name="initial_velocity_a">Initial Velocity A</string>
     <string name="initial_velocity_b">Initial Velocity B</string>
-    <string name="a_is">Acceleration is</string>
-    <string name="step_velocity_name">Step Velocity Name</string>
-    <string name="step_collision_name">Step Collision Name</string>
-    <string name="step_acceleration_name">Step Acceleration Name</string>
-    <string name="vf_formula">"vf = vâ‚€ + at"</string>
+    <string name="a_is">\n\nCalculate Acceleration\nFind it in equation:</string>
+    <string name="step_velocity_name" translatable="false">Step Velocity Name</string>
+    <string name="step_collision_name" translatable="false">Step Collision Name</string>
+    <string name="step_acceleration_name" translatable="false">Step Acceleration Name</string>
+    <string name="vf_formula" translatable="false">vf = v₀ + at</string>
     <string name="unknowns">\nUnknowns: </string>
-    <string name="first_unknowns">First , it detects the known and unknown variables</string>
-    <string name="starting_position_is0">\n\nStarting position (s0) is empty, it is assumed to be 0.0</string>
+    <string name="first_unknowns">First, detect known and unknown variables:</string>
+    <string name="starting_position_is0">Starting position (x0) is empty, \nit is assumed to be 0.0</string>
     <string name="x0_is">\n\nCalculate Initial Position (x₀)\nFind it in equation:</string>
     <string name="replace_in_equation">\n\nReplace values in equation.</string>
     <string name="xf_is">\n\nFinal Position (xf) is calculated with formula:</string>
     <string name="v_is">\n\nCalculate Velocity\nFind it in equation:</string>
     <string name="t_is">\n\nCalculate Time\nFind it in equation:</string>
     <string name="t_is_negative_warn">\n⚠️Time is traditionally not negative in Physics.\nCheck your inputs again.</string>
+    <string name="this_many_unknowns">The amount of unknowns you have is:</string>
+    <string name="unknowns_number">#insert number of unknowns#</string>
+    <string name="missing_vs_mca">\n\nBoth velocities are missing, checking acceleration sign...</string>
+    <string name="positive_a_mca">\nAcceleration is positive, starting velocity (v₀) is assumed to be 0.0</string>
+    <string name="negative_a_mca">\nAcceleration is negative, final velocity (vf) is assumed to be 0.0</string>
+    <string name="missing_both_velocities">\nSystem cannot be solved. Both velocities are missing</string>
+    <string name="v0_is">\n\nCalculate Initial Velocity\nFind it in equation:</string>
+    <string name="vf_is">\n\nCalculate Final Velocity\nFind it in equation:</string>
+    <string name="sf_is">\n\nFinal Position (sf) is calculated with formula:</string>
+    <string name="sf2_formula" translatable="false">sf = s₀ + ½(vf + v₀)t</string>
+    <string name="s0_is">\n\nCalculate Initial Position (s₀)\nFind it in equation:</string>
+    <string name="vf2_formula" translatable="false">vf² = v₀² + 2a(sf - s₀)</string>
+    <string name="sf_formula" translatable="false">sf = s₀ + v₀t + ½at²</string>
+    <string name="formula" translatable="false">t = (vf - v₀) / a</string>
+    <string name="getting_into_i">\n⚠️System is giving imaginary numbers.\nCheck your inputs again.</string>
+    <string name="v_negative_due_to_a">\nGiving Velocity the sign of Acceleration</string>
     <string name="massA_is">\n\nCalculate mass A (mA)\nFind it in equation:</string>
     <string name="massB_is">\n\nCalculate mass B (mB)\nFind it in equation:</string>
     <string name="collision_va_is">\n\nCalculate velocity A1 (vA1)\nFind it in equation:</string>

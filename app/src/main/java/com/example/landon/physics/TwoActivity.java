@@ -1,6 +1,5 @@
 package com.example.landon.physics;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.EditText;
 import com.example.landon.physics.logic.MCA;
 import com.example.landon.physics.logic.Measure;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
 
 public class TwoActivity extends AppCompatActivity {
 
@@ -24,7 +22,7 @@ public class TwoActivity extends AppCompatActivity {
         stepButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TwoActivity.this, StepAcceleration.class));
+                startActivity(new Intent(TwoActivity.this, StepSolution.class));
             }
         });
         popButton.setOnClickListener(new View.OnClickListener() {
@@ -67,16 +65,10 @@ public class TwoActivity extends AppCompatActivity {
 
         if (!s0Text.getText().toString().equals("")) {
             s0 = new Measure(Double.parseDouble(s0Text.getText().toString()), "m");
-            Log.i("INFO", "S0 is NOT empty: " + s0Text.getText().toString());
-        } else {
-            Log.i("INFO", "S0 IS empty: " + s0Text.getText().toString());
         }
 
         if (!sfText.getText().toString().equals("")) {
             sf = new Measure(Double.parseDouble(sfText.getText().toString()), "m");
-            Log.i("INFO", "Sf is NOT empty: " + sfText.getText().toString());
-        } else {
-            Log.i("INFO", "Sf IS empty: " + sfText.getText().toString());
         }
 
         if (!v0Text.getText().toString().equals("")) {
@@ -108,7 +100,7 @@ public class TwoActivity extends AppCompatActivity {
                 aText.setText(system.getA().getMagnitude() + "");
                 tText.setText(system.getT().getMagnitude() + "");
 
-                Intent intent = new Intent(getApplicationContext(), StepAcceleration.class);
+                Intent intent = new Intent(getApplicationContext(), StepSolution.class);
                 intent.putExtra("Tag", system.getStepSolution());
                 startActivity(intent);
             } else {

@@ -23,7 +23,7 @@ public class ThreeActivity extends AppCompatActivity {
         stepButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ThreeActivity.this, StepCollision.class));
+                startActivity(new Intent(ThreeActivity.this, StepSolution.class));
             }
         });
         popButton.setOnClickListener(new View.OnClickListener() {
@@ -63,37 +63,22 @@ public class ThreeActivity extends AppCompatActivity {
 
         if (!mAText.getText().toString().equals("")) {
             massA = new Measure(Double.parseDouble(mAText.getText().toString()), "m");
-            System.out.println("massA is NOT empty: " + mAText.getText().toString());
-        } else {
-            System.out.println("massA IS empty: " + mAText.getText().toString());
         }
 
         if (!mBText.getText().toString().equals("")) {
             massB = new Measure(Double.parseDouble(mBText.getText().toString()), "m");
-            System.out.println("massB is NOT empty: " + mBText.getText().toString());
-        } else {
-            System.out.println("massB IS empty: " + mBText.getText().toString());
         }
 
         if (!vA1Text.getText().toString().equals("")) {
             va = new Measure(Double.parseDouble(vA1Text.getText().toString()), "m/s");
-            System.out.println("va is NOT empty: " + vA1Text.getText().toString());
-        } else {
-            System.out.println("va IS empty: " + vA1Text.getText().toString());
         }
 
         if (!vB1Text.getText().toString().equals("")) {
             vb = new Measure(Double.parseDouble(vB1Text.getText().toString()), "s");
-            System.out.println("vb is NOT empty: " + vB1Text.getText().toString());
-        } else {
-            System.out.println("vb IS empty: " + vB1Text.getText().toString());
         }
 
         if (!v2Text.getText().toString().equals("")) {
             vf = new Measure(Double.parseDouble(v2Text.getText().toString()), "s");
-            System.out.println("vf is NOT empty: " + v2Text.getText().toString());
-        } else {
-            System.out.println("vf IS empty: " + v2Text.getText().toString());
         }
 
         Collision system = new Collision(massA, massB, va, vb, vf);

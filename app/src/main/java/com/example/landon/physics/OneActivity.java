@@ -28,7 +28,7 @@ public class OneActivity extends AppCompatActivity {
         stepButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(OneActivity.this, StepVelocity.class));
+                startActivity(new Intent(OneActivity.this, StepSolution.class));
             }
         });
     }
@@ -59,30 +59,18 @@ public class OneActivity extends AppCompatActivity {
 
         if (!x0Text.getText().toString().equals("")) {
             x0 = new Measure(Double.parseDouble(x0Text.getText().toString()), "m");
-            System.out.println("x0 is NOT empty: " + x0Text.getText().toString());
-        } else {
-            System.out.println("x0 IS empty: " + x0Text.getText().toString());
         }
 
         if (!xfText.getText().toString().equals("")) {
             xf = new Measure(Double.parseDouble(xfText.getText().toString()), "m");
-            System.out.println("xf is NOT empty: " + xfText.getText().toString());
-        } else {
-            System.out.println("xf IS empty: " + xfText.getText().toString());
         }
 
         if (!vText.getText().toString().equals("")) {
             v = new Measure(Double.parseDouble(vText.getText().toString()), "m/s");
-            System.out.println("v is NOT empty: " + vText.getText().toString());
-        } else {
-            System.out.println("v IS empty: " + vText.getText().toString());
         }
 
         if (!tText.getText().toString().equals("")) {
             t = new Measure(Double.parseDouble(tText.getText().toString()), "s");
-            System.out.println("t is NOT empty: " + tText.getText().toString());
-        } else {
-            System.out.println("t IS empty: " + tText.getText().toString());
         }
 
         MCV system = new MCV(x0, xf, v, t);
@@ -96,7 +84,7 @@ public class OneActivity extends AppCompatActivity {
                 vText.setText(system.getV().getMagnitude() + "");
                 tText.setText(system.getT().getMagnitude() + "");
 
-                Intent intent = new Intent(getApplicationContext(), StepAcceleration.class);
+                Intent intent = new Intent(getApplicationContext(), StepSolution.class);
                 intent.putExtra("Tag", system.getStepSolution());
                 startActivity(intent);
             } else {
