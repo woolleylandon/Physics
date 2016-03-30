@@ -118,13 +118,15 @@ public class MCV extends PhysicsSystem implements Solvable {
 
         stepSolution += variables;
         stepSolution += context.getString(R.string.unknowns);
-        stepSolution += unknowns;
+        stepSolution += " " + unknowns;
 
         if (x0 == null && unknowns == 2) {
             x0 = new Measure(0, "m");
             x0.setAssumed(true);
             unknowns = countUnknowns();
             stepSolution += context.getString(R.string.starting_position_is0);
+            stepSolution += context.getString(R.string.unknowns);
+            stepSolution += " " + unknowns;
         }
 
         if (unknowns == 1) {

@@ -147,7 +147,7 @@ public class MCA extends PhysicsSystem implements Solvable {
 
         stepSolution += variables;
         stepSolution += context.getString(R.string.unknowns);
-        stepSolution += unknowns;
+        stepSolution += " " + unknowns;
 
         // in case s0 and sf are null s0 is assumed to be 0
         if (s0 == null && unknowns > 2) {
@@ -168,7 +168,7 @@ public class MCA extends PhysicsSystem implements Solvable {
 
                 stepSolution = context.getString(R.string.positive_a_mca);
                 stepSolution += context.getString(R.string.unknowns);
-                stepSolution += unknowns;
+                stepSolution += " " + unknowns;
 
             } else {
                 vf = new Measure(0, "m/s");
@@ -176,7 +176,7 @@ public class MCA extends PhysicsSystem implements Solvable {
 
                 stepSolution = context.getString(R.string.negative_a_mca);
                 stepSolution += context.getString(R.string.unknowns);
-                stepSolution += unknowns;
+                stepSolution += " " + unknowns;
             }
         }
 

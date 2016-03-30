@@ -28,7 +28,7 @@ public class OneActivity extends AppCompatActivity {
         stepButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(OneActivity.this, StepVelocity.class));
+                startActivity(new Intent(OneActivity.this, StepSolution.class));
             }
         });
     }
@@ -84,7 +84,7 @@ public class OneActivity extends AppCompatActivity {
                 vText.setText(system.getV().getMagnitude() + "");
                 tText.setText(system.getT().getMagnitude() + "");
 
-                Intent intent = new Intent(getApplicationContext(), StepAcceleration.class);
+                Intent intent = new Intent(getApplicationContext(), StepSolution.class);
                 intent.putExtra("Tag", system.getStepSolution());
                 startActivity(intent);
             } else {
