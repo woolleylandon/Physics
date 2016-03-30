@@ -30,7 +30,7 @@
     <string name="step_acceleration_name" translatable="false">Step Acceleration Name</string>
     <string name="vf_formula" translatable="false">vf = v₀ + at</string>
     <string name="unknowns">\nUnknowns: </string>
-    <string name="first_unknowns">First , it detects the known and unknown variables</string>
+    <string name="first_unknowns">First, detect known and unknown variables:</string>
     <string name="starting_position_is0">Starting position (x0) is empty, \nit is assumed to be 0.0</string>
     <string name="x0_is">\n\nCalculate Initial Position (x₀)\nFind it in equation:</string>
     <string name="replace_in_equation">\n\nReplace values in equation.</string>
