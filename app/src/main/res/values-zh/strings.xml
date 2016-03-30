@@ -22,7 +22,7 @@
     <string name="mass_a">質量A</string>
     <string name="mass_b">質量B</string>
     <string name="a_is">Acceleration is</string>
-    <string name="unknowns">未知</string>
+    <string name="unknowns">\n未知</string>
     <string name="first_unknowns">首先, 要知道變數是什麼</string>
 
 </resources>

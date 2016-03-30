@@ -38,4 +38,9 @@
     <string name="v_is">\n\nCalculate Velocity\nFind it in equation:</string>
     <string name="t_is">\n\nCalculate Time\nFind it in equation:</string>
     <string name="t_is_negative_warn">\n⚠️Time is traditionally not negative in Physics.\nCheck your inputs again.</string>
+    <string name="massA_is">\n\nCalculate mass A (mA)\nFind it in equation:</string>
+    <string name="massB_is">\n\nCalculate mass B (mB)\nFind it in equation:</string>
+    <string name="collision_va_is">\n\nCalculate velocity A1 (vA1)\nFind it in equation:</string>
+    <string name="collision_vb_is">\n\nCalculate velocity A2 (vB1)\nFind it in equation:</string>
+    <string name="collision_vf_is">\n\nCalculate final velocity (vf)\nFind it in equation:</string>
 </resources>

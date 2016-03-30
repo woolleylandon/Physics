@@ -16,5 +16,6 @@ public class StepCollision extends Activity {
         int x = dm.widthPixels;
         int y = dm.heightPixels;
         getWindow().setLayout((int) (x * 0.9), (int) (y * 0.64));
+
     }
 }
