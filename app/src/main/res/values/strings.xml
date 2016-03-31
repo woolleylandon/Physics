@@ -54,4 +54,9 @@
     <string name="formula" translatable="false">t = (vf - v₀) / a</string>
     <string name="getting_into_i">\n⚠️System is giving imaginary numbers.\nCheck your inputs again.</string>
     <string name="v_negative_due_to_a">\nGiving Velocity the sign of Acceleration</string>
+    <string name="massA_is">\n\nCalculate mass A (mA)\nFind it in equation:</string>
+    <string name="massB_is">\n\nCalculate mass B (mB)\nFind it in equation:</string>
+    <string name="collision_va_is">\n\nCalculate velocity A1 (vA1)\nFind it in equation:</string>
+    <string name="collision_vb_is">\n\nCalculate velocity A2 (vB1)\nFind it in equation:</string>
+    <string name="collision_vf_is">\n\nCalculate final velocity (vf)\nFind it in equation:</string>
 </resources>
