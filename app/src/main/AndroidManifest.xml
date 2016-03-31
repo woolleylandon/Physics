@@ -69,11 +69,6 @@
             android:label="@string/step_acceleration_name"
             android:theme="@style/AppTheme.PopUpTheme"/>
 
-        <activity
-            android:name=".StepCollision"
-            android:label="@string/step_collision_name"
-            android:theme="@style/AppTheme.PopUpTheme"/>
-
     </application>
 
 </manifest>

@@ -92,7 +92,7 @@ public class ThreeActivity extends AppCompatActivity {
                 vB1Text.setText(system.getVb().getMagnitude() + "");
                 v2Text.setText(system.getVf().getMagnitude() + "");
 
-                Intent intent = new Intent(getApplicationContext(), StepAcceleration.class);
+                Intent intent = new Intent(getApplicationContext(), StepSolution.class);
                 intent.putExtra("Tag", system.getStepSolution());
                 startActivity(intent);
             } else {
