@@ -82,7 +82,6 @@ public class ThreeActivity extends AppCompatActivity {
         }
 
         Collision system = new Collision(massA, massB, va, vb, vf);
-        system.setContext(getApplicationContext());
 
         try {
             if (system.solveSystem()) {
@@ -91,16 +90,11 @@ public class ThreeActivity extends AppCompatActivity {
                 vA1Text.setText(system.getVa().getMagnitude() + "");
                 vB1Text.setText(system.getVb().getMagnitude() + "");
                 v2Text.setText(system.getVf().getMagnitude() + "");
-
-                Intent intent = new Intent(getApplicationContext(), StepSolution.class);
-                intent.putExtra("Tag", system.getStepSolution());
-                startActivity(intent);
             } else {
                 Log.i("INFO", "Unsolvable problem");
             }
         } catch (Exception error) {
             Log.e("ERROR", "Crashed due to unsolvable problem.");
-            error.printStackTrace();
         }
     }
 }
