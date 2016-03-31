@@ -2,7 +2,7 @@ package com.example.landon.physics.logic;
 
 public abstract class PhysicsSystem {
     int unknowns;
-    boolean solved;
+    public boolean solved;
     String formulas;
     String stepSolution;
 

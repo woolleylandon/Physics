@@ -178,8 +178,10 @@ public class MCV extends PhysicsSystem implements Solvable {
                     stepSolution += context.getString(R.string.t_is_negative_warn);
                 }
             }
+            solved = true;
             return true;
         }
+        solved = false;
         return false;
     }
 }

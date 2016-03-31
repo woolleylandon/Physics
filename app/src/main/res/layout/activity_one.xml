@@ -387,7 +387,8 @@
                     android:textColor="#efac57"
                     android:textAllCaps="false"
                     android:layout_gravity="center"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    style="?android:attr/borderlessButtonStyle"
+                    android:onClick="oneClick" />
 
             </LinearLayout>
 
