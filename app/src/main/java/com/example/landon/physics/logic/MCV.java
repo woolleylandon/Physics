@@ -49,6 +49,7 @@ public class MCV extends PhysicsSystem implements Solvable {
         this.xf = xf;
         this.v = v;
         this.t = t;
+
         solved = false;
         formulas = "sf = s₀ + v*t";
         unknowns = countUnknowns();

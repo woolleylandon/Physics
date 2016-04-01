@@ -11,6 +11,7 @@
 package com.example.landon.physics.logic;
 import android.content.Context;
 import com.example.landon.physics.R;
+
 public class MCA extends PhysicsSystem implements Solvable {
 
     /**
@@ -38,7 +39,36 @@ public class MCA extends PhysicsSystem implements Solvable {
      */
     private Measure t;
 
+    String xf_formula = "xf = x₀ + v(t)";
+    String x0_formula = "x₀ = xf - v(t)";
+    String v_formula = "v = (xf - x₀) / t";
+    String t_formula = "t = (xf - x₀) / v";
+
     private Context context;
+
+    /**
+     * Constructor, takes Measures as parameters. It accepts nulls.
+     *
+     * @param s0 The starting position
+     * @param sf The final position
+     * @param v0 The starting velocity
+     * @param vf The final velocity
+     * @param a  The acceleration
+     * @param t  The time
+     */
+    public MCA(Measure s0, Measure sf, Measure v0, Measure vf, Measure a, Measure t) {
+        this.s0 = s0;
+        this.sf = sf;
+        this.v0 = v0;
+        this.vf = vf;
+        this.a = a;
+        this.t = t;
+
+        solved = false;
+        formulas = "sf = s₀ + v*t";
+        unknowns = countUnknowns();
+        stepSolution = "";
+    }
 
     public Measure getS0() {
         return s0;
@@ -66,29 +96,6 @@ public class MCA extends PhysicsSystem implements Solvable {
 
     public void setContext(Context c) {
         context = c;
-    }
-
-    /**
-     * Constructor, takes Measures as parameters. It accepts nulls.
-     *
-     * @param s0 The starting position
-     * @param sf The final position
-     * @param v0 The starting velocity
-     * @param vf The final velocity
-     * @param a  The acceleration
-     * @param t  The time
-     */
-    public MCA(Measure s0, Measure sf, Measure v0, Measure vf, Measure a, Measure t) {
-        this.s0 = s0;
-        this.sf = sf;
-        this.v0 = v0;
-        this.vf = vf;
-        this.a = a;
-        this.t = t;
-
-        solved = false;
-        unknowns = countUnknowns();
-        stepSolution = "\tStep by step solution is\t\nunavailable due to empty inputs.";
     }
 
     /**
