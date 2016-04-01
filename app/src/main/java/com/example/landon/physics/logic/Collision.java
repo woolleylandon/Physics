@@ -182,6 +182,7 @@ public class Collision extends PhysicsSystem implements Solvable {
                 stepSolution += String.format("\n v2 = (%.1f*%.1f + %.1f*%.1f) / (%.1f + %.1f)", massA.getMagnitude(), va.getMagnitude(), massB.getMagnitude(), vb.getMagnitude(), massA.getMagnitude(), massB.getMagnitude());
                 stepSolution += String.format("\n v2 = %.1f %s", finalVf, vf.getUnit());
             }
+            solved = true;
             return true;
         }
         return false;

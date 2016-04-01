@@ -41,63 +41,68 @@ public class OneActivity extends AppCompatActivity {
         ((EditText) findViewById(R.id.xfText)).getText().clear();
         ((EditText) findViewById(R.id.vText)).getText().clear();
         ((EditText) findViewById(R.id.tText)).getText().clear();
+        system = null;
     }
 
     public void oneClick(View view) {
+        try {
 
-        if (system != null && system.solved == true) {
-            Intent intent = new Intent(getApplicationContext(), StepSolution.class);
-            intent.putExtra("Tag", system.getStepSolution());
-            startActivity(intent);
-        } else  {
-            EditText x0Text = (EditText) findViewById(R.id.x0Text);
-            EditText xfText = (EditText) findViewById(R.id.xfText);
-            EditText vText = (EditText) findViewById(R.id.vText);
-            EditText tText = (EditText) findViewById(R.id.tText);
+            if (system != null && system.solved == true) {
+                Intent intent = new Intent(getApplicationContext(), StepSolution.class);
+                intent.putExtra("Tag", system.getStepSolution());
+                startActivity(intent);
+            } else {
+                EditText x0Text = (EditText) findViewById(R.id.x0Text);
+                EditText xfText = (EditText) findViewById(R.id.xfText);
+                EditText vText = (EditText) findViewById(R.id.vText);
+                EditText tText = (EditText) findViewById(R.id.tText);
 
-            Measure x0 = null;
-            Measure xf = null;
-            Measure v = null;
-            Measure t = null;
+                Measure x0 = null;
+                Measure xf = null;
+                Measure v = null;
+                Measure t = null;
 
-            if (!x0Text.getText().toString().equals("")) {
-                x0 = new Measure(Double.parseDouble(x0Text.getText().toString()), "m");
-            }
-
-            if (!xfText.getText().toString().equals("")) {
-                xf = new Measure(Double.parseDouble(xfText.getText().toString()), "m");
-            }
-
-            if (!vText.getText().toString().equals("")) {
-                v = new Measure(Double.parseDouble(vText.getText().toString()), "m/s");
-            }
-
-            if (!tText.getText().toString().equals("")) {
-                t = new Measure(Double.parseDouble(tText.getText().toString()), "s");
-            }
-
-            system = new MCV(x0, xf, v, t);
-
-            system.setContext(getApplicationContext());
-
-            try {
-                if (system.solveSystem()) {
-                    x0Text.setText(system.getX0().getMagnitude() + "");
-                    xfText.setText(system.getXf().getMagnitude() + "");
-                    vText.setText(system.getV().getMagnitude() + "");
-                    tText.setText(system.getT().getMagnitude() + "");
-
-                    Intent intent = new Intent(getApplicationContext(), StepSolution.class);
-                    intent.putExtra("Tag", system.getStepSolution());
-                    startActivity(intent);
-                } else {
-                    Log.i("INFO", "Unsolvable problem");
+                if (!x0Text.getText().toString().equals("")) {
+                    x0 = new Measure(Double.parseDouble(x0Text.getText().toString()), "m");
                 }
-            } catch (Exception error) {
-                Log.e("ERROR", "Crashed due to unsolvable problem.");
-                error.printStackTrace();
+
+                if (!xfText.getText().toString().equals("")) {
+                    xf = new Measure(Double.parseDouble(xfText.getText().toString()), "m");
+                }
+
+                if (!vText.getText().toString().equals("")) {
+                    v = new Measure(Double.parseDouble(vText.getText().toString()), "m/s");
+                }
+
+                if (!tText.getText().toString().equals("")) {
+                    t = new Measure(Double.parseDouble(tText.getText().toString()), "s");
+                }
+
+                system = new MCV(x0, xf, v, t);
+
+                system.setContext(getApplicationContext());
+
+                try {
+                    if (system.solveSystem()) {
+                        x0Text.setText(system.getX0().getMagnitude() + "");
+                        xfText.setText(system.getXf().getMagnitude() + "");
+                        vText.setText(system.getV().getMagnitude() + "");
+                        tText.setText(system.getT().getMagnitude() + "");
+
+                        Intent intent = new Intent(getApplicationContext(), StepSolution.class);
+                        intent.putExtra("Tag", system.getStepSolution());
+                        startActivity(intent);
+                    } else {
+                        Log.i("INFO", "Unsolvable problem");
+                    }
+                } catch (Exception error) {
+                    Log.e("ERROR", "Crashed due to unsolvable problem.");
+                    error.printStackTrace();
+                }
             }
+        } catch (Exception entry) {
+            Log.e("ERROR", "Crashed due to out of place comma.");
+            entry.printStackTrace();
         }
     }
-
 }

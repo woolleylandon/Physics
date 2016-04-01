@@ -422,8 +422,8 @@ public class MCA extends PhysicsSystem implements Solvable {
                 stepSolution += text;
             }
 
+            solved = true;
             return (countUnknowns() == 0);
-
         } // 2 unknowns cases
 
         // case not found
