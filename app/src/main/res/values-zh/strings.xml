@@ -21,8 +21,25 @@
     <string name="initial_velocity_b">初速度B</string>
     <string name="mass_a">質量A</string>
     <string name="mass_b">質量B</string>
-    <string name="a_is">Acceleration is</string>
-    <string name="unknowns">\n未知</string>
+    <string name="a_is">\n\n求加速度\n找出方程:</string>
+    <string name="unknowns">\n未知數:</string>
     <string name="first_unknowns">首先, 要知道變數是什麼</string>
+    <string name="collision_va_is">\n\n求速度 A1 (vA1)\n找出方程:</string>
+    <string name="collision_vb_is">\n\n求速度 A2 (vB1)\n找出方程:</string>
+    <string name="collision_vf_is">\n\n求末速度 (vf)\n找出方程:</string>
+    <string name="massA_is">\n\n求質量A (mA)\n找出方程:</string>
+    <string name="massB_is">\n\n求質量B (mA)\n找出方程:</string>
+    <string name="missing_both_velocities"></string>
+    <string name="v0_is">\n\n求初速度 \n找出方程:</string>
+    <string name="v_is">\n\n求速度 \n找出方程:</string>
+    <string name="replace_in_equation">\n\n把以知數代入方程.</string>
+    <string name="s0_is">\n\n求初位移 \n找出方程:</string>
+    <string name="t_is">\n\n求時間 \n找出方程:</string>
+    <string name="starting_position_is0">首位移 (x0) 是空的, \n所以設定為 0.0</string>
+    <string name="sf_is">\n\n計算末位移 (sf) 用以下方程:</string>
+    <string name="t_is_negative_warn">\n⚠️時間不能為負數。\n請重新輸入！</string>
+    <string name="vf_is">\n\n求末速度 \n找出方程:</string>
+    <string name="x0_is">\n\n求初速度 (x₀)\n找出方程:</string>
+    <string name="xf_is">\n\n計算末位移 (xf) 用以下方程:</string>
 
 </resources>
