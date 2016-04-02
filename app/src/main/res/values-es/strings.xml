@@ -46,5 +46,4 @@
     <string name="collision_vf_is">\n\Calcula la velocidad final (vf)\nDespéjala de la fórmula:</string>
     <string name="massA_is">\n\Calcula la masa A (mA)\nDespéjala de la fórmula:</string>
     <string name="massB_is">\n\Calcula la masa B (mB)\nDespéjala de la fórmula:</string>
-    <string name="this_many_unknowns"></string>
 </resources>
