@@ -27,4 +27,10 @@ public class StepSolution extends Activity {
         TextView text = (TextView) findViewById(R.id.words);
         text.setText(step);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
 }

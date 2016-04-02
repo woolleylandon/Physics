@@ -25,6 +25,7 @@ public class ThreeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ThreeActivity.this, PopCollisions.class));
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
     }
@@ -48,10 +49,9 @@ public class ThreeActivity extends AppCompatActivity {
         try {
 
             if (system != null && system.solved == true) {
-                Intent intent = new Intent(getApplicationContext(), StepSolution.class);
-                intent.putExtra("Tag", system.getStepSolution());
-                startActivity(intent);
+                Log.i("INFO", "Already Solved");
             } else {
+
                 EditText mAText = (EditText) findViewById(R.id.mAText);
                 EditText mBText = (EditText) findViewById(R.id.mBText);
                 EditText vA1Text = (EditText) findViewById(R.id.vA1Text);
@@ -106,9 +106,22 @@ public class ThreeActivity extends AppCompatActivity {
                     error.printStackTrace();
                 }
             }
+
         } catch (Exception entry) {
             Log.e("ERROR", "Crashed due to out of place comma.");
             entry.printStackTrace();
+        }
+    }
+
+    public void stepThreeClick(View view) {
+        try {
+            Intent intent = new Intent(getApplicationContext(), StepSolution.class);
+            intent.putExtra("Tag", system.getStepSolution());
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        } catch (Exception stepError) {
+            Log.e("ERROR", "Crashed due to no inputs to solve.");
+            stepError.printStackTrace();
         }
     }
 }

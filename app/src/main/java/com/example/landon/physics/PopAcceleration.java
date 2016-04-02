@@ -21,4 +21,10 @@ public class PopAcceleration extends Activity {
         int y = dm.heightPixels;
         getWindow().setLayout((int) (x * 0.9), (int) (y * 0.64));
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
 }

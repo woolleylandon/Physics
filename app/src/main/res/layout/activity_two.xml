@@ -517,7 +517,7 @@
                 android:textSize="20sp"
                 android:textColor="#efac57"
                 android:id="@+id/step2"
-                android:onClick="twoClick" />
+                android:onClick="stepTwoClick" />
 
         </LinearLayout>
 

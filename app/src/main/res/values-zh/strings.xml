@@ -37,7 +37,7 @@
     <string name="t_is">\n\n求時間 \n找出方程:</string>
     <string name="starting_position_is0">首位移 (x0) 是空的, \n所以設定為 0.0</string>
     <string name="sf_is">\n\n計算末位移 (sf) 用以下方程:</string>
-    <string name="t_is_negative_warn">\n⚠️時間不能為負數。\n請重新輸入！</string>
+    <string name="t_is_negative_warn">\n⚠ 時間不能為負數。\n請重新輸入！</string>
     <string name="vf_is">\n\n求末速度 \n找出方程:</string>
     <string name="x0_is">\n\n求初速度 (x₀)\n找出方程:</string>
     <string name="xf_is">\n\n計算末位移 (xf) 用以下方程:</string>

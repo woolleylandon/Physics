@@ -115,7 +115,7 @@ public class Collision extends PhysicsSystem implements Solvable {
 
         stepSolution += variables;
         stepSolution += context.getString(R.string.unknowns);
-        stepSolution += unknowns;
+        stepSolution +=  " " + unknowns;
 
         if(unknowns == 1) {
             if (massA == null) {

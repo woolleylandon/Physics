@@ -451,7 +451,7 @@
                 android:textSize="20sp"
                 android:textColor="#efac57"
                 android:id="@+id/step3"
-                android:onClick="threeClick" />
+                android:onClick="stepThreeClick" />
 
         </LinearLayout>
 

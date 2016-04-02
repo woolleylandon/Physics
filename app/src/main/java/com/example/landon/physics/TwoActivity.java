@@ -24,6 +24,7 @@ public class TwoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(TwoActivity.this, PopAcceleration.class));
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
     }
@@ -48,10 +49,9 @@ public class TwoActivity extends AppCompatActivity {
         try {
 
             if (system != null && system.solved == true) {
-                Intent intent = new Intent(getApplicationContext(), StepSolution.class);
-                intent.putExtra("Tag", system.getStepSolution());
-                startActivity(intent);
+                Log.i("INFO", "Already Solved");
             } else {
+
                 EditText s0Text = (EditText) findViewById(R.id.mca_s0_txt);
                 EditText sfText = (EditText) findViewById(R.id.mca_sf_txt);
                 EditText v0Text = (EditText) findViewById(R.id.mca_v0_txt);
@@ -101,10 +101,6 @@ public class TwoActivity extends AppCompatActivity {
                         vfText.setText(system.getVf().getMagnitude() + "");
                         aText.setText(system.getA().getMagnitude() + "");
                         tText.setText(system.getT().getMagnitude() + "");
-
-                        Intent intent = new Intent(getApplicationContext(), StepSolution.class);
-                        intent.putExtra("Tag", system.getStepSolution());
-                        startActivity(intent);
                     } else {
                         Log.i("INFO", "Unsolvable problem");
                     }
@@ -113,9 +109,22 @@ public class TwoActivity extends AppCompatActivity {
                     error.printStackTrace();
                 }
             }
+
         } catch (Exception entry) {
             Log.e("ERROR", "Crashed due to out of place comma.");
             entry.printStackTrace();
+        }
+    }
+
+    public void stepTwoClick(View view) {
+        try {
+            Intent intent = new Intent(getApplicationContext(), StepSolution.class);
+            intent.putExtra("Tag", system.getStepSolution());
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        } catch (Exception stepError) {
+            Log.e("ERROR", "Crashed due to no inputs to solve.");
+            stepError.printStackTrace();
         }
     }
 }

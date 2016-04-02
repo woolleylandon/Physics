@@ -385,7 +385,7 @@
                     android:textSize="20sp"
                     android:textColor="#efac57"
                     android:id="@+id/step"
-                    android:onClick="oneClick" />
+                    android:onClick="stepOneClick" />
 
             </LinearLayout>
 
