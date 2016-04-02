@@ -28,11 +28,11 @@
     <string name="step_velocity_name" translatable="false">Step Velocity Name</string>
     <string name="step_collision_name" translatable="false">Step Collision Name</string>
     <string name="step_acceleration_name" translatable="false">Step Acceleration Name</string>
-    <string name="vf_formula" translatable="false">vf = v₀ + at</string>
+    <string name="vf_formula" translatable="false">vf = v0 + at</string>
     <string name="unknowns">\nUnknowns: </string>
     <string name="first_unknowns">First, detect known and unknown variables:</string>
     <string name="starting_position_is0">Starting position (x0) is empty, \nit is assumed to be 0.0</string>
-    <string name="x0_is">\n\nCalculate Initial Position (x₀)\nFind it in equation:</string>
+    <string name="x0_is">\n\nCalculate Initial Position (x0)\nFind it in equation:</string>
     <string name="replace_in_equation">\n\nReplace values in equation.</string>
     <string name="xf_is">\n\nFinal Position (xf) is calculated with formula:</string>
     <string name="v_is">\n\nCalculate Velocity\nFind it in equation:</string>
@@ -49,9 +49,9 @@
     <string name="sf_is">\n\nFinal Position (sf) is calculated with formula:</string>
     <string name="sf2_formula" translatable="false">sf = s₀ + ½(vf + v₀)t</string>
     <string name="s0_is">\n\nCalculate Initial Position (s₀)\nFind it in equation:</string>
-    <string name="vf2_formula" translatable="false">vf² = v₀² + 2a(sf - s₀)</string>
+    <string name="vf2_formula" translatable="false">vf² = v0² + 2a(sf - s0)</string>
     <string name="sf_formula" translatable="false">sf = s₀ + v₀t + ½at²</string>
-    <string name="formula" translatable="false">t = (vf - v₀) / a</string>
+    <string name="formula" translatable="false">t = (vf - v0) / a</string>
     <string name="getting_into_i">\n⚠️System is giving imaginary numbers.\nCheck your inputs again.</string>
     <string name="v_negative_due_to_a">\nGiving Velocity the sign of Acceleration</string>
     <string name="massA_is">\n\nCalculate mass A (mA)\nFind it in equation:</string>

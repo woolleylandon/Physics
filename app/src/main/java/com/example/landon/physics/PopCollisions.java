@@ -3,12 +3,16 @@ package com.example.landon.physics;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.DisplayMetrics;
+import android.view.WindowManager;
 
 public class PopCollisions extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        WindowManager.LayoutParams windowManager = getWindow().getAttributes();
+        windowManager.dimAmount = 0.75f;
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         setContentView(R.layout.pop_collisions);
         FontHelper.applyFont(this, findViewById(R.id.pop_collisions), "fonts/avenir.ttf");
         DisplayMetrics dm = new DisplayMetrics();

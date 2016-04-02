@@ -29,10 +29,10 @@ public class MCV extends PhysicsSystem implements Solvable {
      */
     private Measure t;
 
-    String xf_formula = "xf = x₀ + v(t)";
-    String x0_formula = "x₀ = xf - v(t)";
-    String v_formula = "v = (xf - x₀) / t";
-    String t_formula = "t = (xf - x₀) / v";
+    String xf_formula = "xf = x0 + v(t)";
+    String x0_formula = "x0 = xf - v(t)";
+    String v_formula = "v = (xf - x0) / t";
+    String t_formula = "t = (xf - x0) / v";
 
     private Context context;
 
@@ -51,7 +51,7 @@ public class MCV extends PhysicsSystem implements Solvable {
         this.t = t;
 
         solved = false;
-        formulas = "sf = s₀ + v*t";
+        formulas = "sf = s0 + v * t";
         unknowns = countUnknowns();
         stepSolution = "";
     }

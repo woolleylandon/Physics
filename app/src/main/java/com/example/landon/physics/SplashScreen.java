@@ -11,15 +11,15 @@ public class SplashScreen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        int splashInterval = 1000;
+        int screen = 1000;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_main);
         FontHelper.applyFont(this, findViewById(R.id.splash_screen), "fonts/avenir.ttf");
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.splash_screen);
-        AlphaAnimation animation = new AlphaAnimation(0.0f, 1.0f);
-        animation.setFillAfter(true);
-        animation.setDuration(1000);
-        layout.startAnimation(animation);
+        AlphaAnimation text = new AlphaAnimation(0.0f, 1.0f);
+        text.setFillAfter(true);
+        text.setDuration(1500);
+        layout.startAnimation(text);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -27,6 +27,6 @@ public class SplashScreen extends Activity {
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
-        }, splashInterval);
+        }, screen);
     }
 }
