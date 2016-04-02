@@ -31,7 +31,7 @@
     <string name="t_is">\n\nCalcula el tiempo\nDespéjalo de la fórmula:</string>
     <string name="t_is_negative_warn">\n⚠ El Tiempo tradicionalmente no es negativo en Física.\nVerifica tus valores de nuevo.</string>
     <string name="a_is">\n\nCalcula la acceleración\nDespéjala de la fórmula:</string>
-    <string name="missing_vs_mca">\n\nAmbas velocidades están en blanco, hay que revisar el signo de la acceleración...</string>
+    <string name="missing_vs_mca">\nAmbas velocidades están en blanco, hay que revisar el signo de la acceleración&#8230;</string>
     <string name="positive_a_mca">\nLa acceleración es positiva, se asume que la velocidad inicial (v₀) vale 0.0</string>
     <string name="negative_a_mca">\nLa acceleración es negativa, se asume que la velocidad final (vf) vale 0.0</string>
     <string name="missing_both_velocities">\nNo se puede resolver el sistema. Ambas velocidades son desconocidas</string>
