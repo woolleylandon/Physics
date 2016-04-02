@@ -100,8 +100,8 @@ public class Collision extends PhysicsSystem implements Solvable {
      * @return true when the system was solve, false otherwise
      */
     public boolean solveSystem() {
+        stepSolution = context.getString(R.string.first_unknowns);
         String variables = "";
-
         variables += "\nmassA = ";
         variables += massA == null ? "?" : massA.getMagnitude() + " kg";
         variables += "\nmassB = ";
