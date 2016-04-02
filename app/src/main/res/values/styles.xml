@@ -44,7 +44,7 @@
     </string>
 
     <string
-        name="v2">
+        name="v2" translatable="false">
         <html>v<sup><small>2</small></sup></html>
     </string>
 

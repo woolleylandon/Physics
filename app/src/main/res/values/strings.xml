@@ -49,10 +49,10 @@
     <string name="sf_is">\n\nFinal Position (sf) is calculated with formula:</string>
     <string name="sf2_formula" translatable="false">sf = s₀ + ½(vf + v₀)t</string>
     <string name="s0_is">\n\nCalculate Initial Position (s₀)\nFind it in equation:</string>
-    <string name="vf2_formula" translatable="false">vf² = v0² + 2a(sf - s0)</string>
+    <string name="vf2_formula" translatable="false">vf² = v₀² + 2a(sf - s₀)</string>
     <string name="sf_formula" translatable="false">sf = s₀ + v₀t + ½at²</string>
-    <string name="formula" translatable="false">t = (vf - v0) / a</string>
-    <string name="getting_into_i">\n⚠ System is giving imaginary numbers.\nCheck your inputs again.</string>
+    <string name="formula" translatable="false">t = (vf - v₀) / a</string>
+    <string name="getting_into_i">\n⚠️System is giving imaginary numbers.\nCheck your inputs again.</string>
     <string name="v_negative_due_to_a">\nGiving Velocity the sign of Acceleration</string>
     <string name="massA_is">\n\nCalculate mass A (mA)\nFind it in equation:</string>
     <string name="massB_is">\n\nCalculate mass B (mB)\nFind it in equation:</string>

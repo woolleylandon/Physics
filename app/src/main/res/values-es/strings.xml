@@ -41,4 +41,9 @@
     <string name="v0_is">\n\nCalcula la velocidad inicial\nDespéjala de la fórmula:</string>
     <string name="sf_is">\n\nLa posición final (sf) se calcula con la fórmula:</string>
     <string name="s0_is">\n\nCalcula la posición inicial (s₀)Despéjala de la fórmula:</string>
+    <string name="collision_va_is">\n\Calcula la velocidad A1 (vA1)\nDespéjala de la fórmula:</string>
+    <string name="collision_vb_is">\n\Calcula la velocidad A2 (vB1)\nDespéjala de la fórmula:</string>
+    <string name="collision_vf_is">\n\Calcula la velocidad final (vf)\nDespéjala de la fórmula:</string>
+    <string name="massA_is">\n\Calcula la masa A (mA)\nDespéjala de la fórmula:</string>
+    <string name="massB_is">\n\Calcula la masa B (mB)\nDespéjala de la fórmula:</string>
 </resources>

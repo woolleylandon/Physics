@@ -29,7 +29,7 @@
     <string name="collision_vf_is">\n\n求末速度 (vf)\n找出方程:</string>
     <string name="massA_is">\n\n求質量A (mA)\n找出方程:</string>
     <string name="massB_is">\n\n求質量B (mA)\n找出方程:</string>
-    <string name="missing_both_velocities"></string>
+    <string name="missing_both_velocities">\n系統錯誤。 欠兩個速度</string>
     <string name="v0_is">\n\n求初速度 \n找出方程:</string>
     <string name="v_is">\n\n求速度 \n找出方程:</string>
     <string name="replace_in_equation">\n\n把以知數代入方程.</string>
@@ -41,5 +41,8 @@
     <string name="vf_is">\n\n求末速度 \n找出方程:</string>
     <string name="x0_is">\n\n求初速度 (x₀)\n找出方程:</string>
     <string name="xf_is">\n\n計算末位移 (xf) 用以下方程:</string>
+    <string name="missing_vs_mca">\n\n欠兩個速度, 請檢查加速度...</string>
+    <string name="negative_a_mca">\n加速度是負數, 末速度 (vf) 預設為 0.0</string>
+    <string name="positive_a_mca">\n加速度是正數, 初速度 (v₀) 預設為 0.0</string>
 
 </resources>
