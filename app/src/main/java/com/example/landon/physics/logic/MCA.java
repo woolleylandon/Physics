@@ -39,11 +39,6 @@ public class MCA extends PhysicsSystem implements Solvable {
      */
     private Measure t;
 
-    String xf_formula = "xf = x0 + v(t)";
-    String x0_formula = "x0 = xf - v(t)";
-    String v_formula = "v = (xf - x0) / t";
-    String t_formula = "t = (xf - x0) / v";
-
     private Context context;
 
     /**
@@ -65,7 +60,7 @@ public class MCA extends PhysicsSystem implements Solvable {
         this.t = t;
 
         solved = false;
-        formulas = "sf = s0 + v*t";
+        formulas = " sf = s0 + v * t";
         unknowns = countUnknowns();
         stepSolution = "";
     }
@@ -206,9 +201,8 @@ public class MCA extends PhysicsSystem implements Solvable {
                     double timeValue = (vf.getMagnitude() - v0.getMagnitude()) / a.getMagnitude();
                     t = new Measure(timeValue, "s");
                     stepSolution += context.getString(R.string.t_is);
-                    stepSolution += context.getString(R.string.vf_formula);
+                    stepSolution += String.format("vf = v0 + at\nt = (vf - v0)/a");
                     stepSolution += context.getString(R.string.replace_in_equation);
-                    stepSolution += context.getString(R.string.missing_both_velocities);
                     stepSolution += String.format("\n t = (%.3f - %.3f) / %.3f", vf.getMagnitude(), v0.getMagnitude(), a.getMagnitude());
                     stepSolution += String.format("\n t = %.3f %s", timeValue, t.getUnit());
 
@@ -426,8 +420,6 @@ public class MCA extends PhysicsSystem implements Solvable {
                 stepSolution += context.getString(R.string.replace_in_equation);
                 stepSolution += String.format("\n a = (%.3f - %.3f) / %.3f", vf.getMagnitude(), v0.getMagnitude(), t.getMagnitude());
                 stepSolution += String.format("\n a = %.3f %s", accelerationValue, a.getUnit());
-                String text = context.getString(R.string.a_is);
-                stepSolution += text;
             }
 
             solved = true;

@@ -29,10 +29,10 @@ public class MCV extends PhysicsSystem implements Solvable {
      */
     private Measure t;
 
-    String xf_formula = "xf = x0 + v(t)";
-    String x0_formula = "x0 = xf - v(t)";
-    String v_formula = "v = (xf - x0) / t";
-    String t_formula = "t = (xf - x0) / v";
+    String xf_formula = " xf = x0 + v(t)";
+    String x0_formula = " x0 = xf - v(t)";
+    String v_formula = " v = (xf - x0) / t";
+    String t_formula = " t = (xf - x0) / v";
 
     private Context context;
 
@@ -139,7 +139,7 @@ public class MCV extends PhysicsSystem implements Solvable {
                 x0 = new Measure(initialPositionValue, "m");
 
                 stepSolution += context.getString(R.string.x0_is);
-                stepSolution += "\n" + xf_formula;
+                stepSolution += xf_formula;
                 stepSolution += "\n" + x0_formula;
                 stepSolution += context.getString(R.string.replace_in_equation);
                 stepSolution += String.format("\n x0 = %.3f - %.3f(%.3f)", xf.getMagnitude(), v.getMagnitude(), t.getMagnitude());
@@ -149,7 +149,7 @@ public class MCV extends PhysicsSystem implements Solvable {
                 xf = new Measure(finalPositionValue, "m");
 
                 stepSolution += context.getString(R.string.xf_is);
-                stepSolution += "\n" + xf_formula;
+                stepSolution += xf_formula;
                 stepSolution += context.getString(R.string.replace_in_equation);
                 stepSolution += String.format("\n xf = %.3f + %.3f(%.3f)", x0.getMagnitude(), v.getMagnitude(), t.getMagnitude());
                 stepSolution += String.format("\n xf = %.3f %s", finalPositionValue, xf.getUnit());
@@ -158,7 +158,7 @@ public class MCV extends PhysicsSystem implements Solvable {
                 v = new Measure(velocityValue, "m/s");
 
                 stepSolution += context.getString(R.string.v_is);
-                stepSolution += "\n" + xf_formula;
+                stepSolution += xf_formula;
                 stepSolution += "\n" + v_formula;
                 stepSolution += context.getString(R.string.replace_in_equation);
                 stepSolution += String.format("\n v = (%.3f - %.3f) / %.3f", xf.getMagnitude(), x0.getMagnitude(), t.getMagnitude());
@@ -168,7 +168,7 @@ public class MCV extends PhysicsSystem implements Solvable {
                 t = new Measure(timeValue, "s");
 
                 stepSolution += context.getString(R.string.t_is);
-                stepSolution += "\n" + xf_formula;
+                stepSolution += xf_formula;
                 stepSolution += "\n" + t_formula;
                 stepSolution += context.getString(R.string.replace_in_equation);
                 stepSolution += String.format("\n t = (%.3f - %.3f) / %.3f", xf.getMagnitude(), x0.getMagnitude(), v.getMagnitude(), timeValue);

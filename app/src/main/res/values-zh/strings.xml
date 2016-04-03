@@ -39,11 +39,11 @@
     <string name="sf_is">\n\n計算末位移 (sf) 用以下方程:</string>
     <string name="t_is_negative_warn">\n⚠ 時間不能為負數。\n請重新輸入！</string>
     <string name="vf_is">\n\n求末速度 \n找出方程:</string>
-    <string name="x0_is">\n\n求初速度 (x₀)\n找出方程:</string>
+    <string name="x0_is">\n\n求初速度 (x0)\n找出方程:</string>
     <string name="xf_is">\n\n計算末位移 (xf) 用以下方程:</string>
     <string name="missing_vs_mca">\n\n欠兩個速度, 請檢查加速度&#8230;</string>
     <string name="negative_a_mca">\n加速度是負數, 末速度 (vf) 預設為 0.0</string>
-    <string name="positive_a_mca">\n加速度是正數, 初速度 (v₀) 預設為 0.0</string>
+    <string name="positive_a_mca">\n加速度是正數, 初速度 (v0) 預設為 0.0</string>
     <string name="getting_into_i">\n⚠ 系統出現虛數.\n請檢查輸入！</string>
     <string name="v_negative_due_to_a">\n速度引至加速度的改變</string>
 </resources>
